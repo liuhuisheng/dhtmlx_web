@@ -1,0 +1,85 @@
+﻿
+/*for fix dhtmlx compatible with bootstrap start */
+table {
+  border-collapse:initial;
+}
+
+div[class^='dhx_'], 
+div[class^='dhtmlx'], 
+div[class*='dhx_'],
+div.gridbox table.obj td{
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    -ms-box-sizing: content-box;
+    box-sizing: content-box;
+}
+ 
+a:hover,
+a:focus {
+  text-decoration:none;
+}
+/*for fix dhtmlx compatible with bootstrap end */
+
+
+/*fix modal behind overlayer*/
+.modal-dialog {
+    z-index:9999;
+}
+
+/*
+    http://www.w3cschool.cc/bootstrap/bootstrap-forms.html
+*/
+.control-label {
+    padding: 3px 5px !important;
+    height:28px !important;
+}
+
+.dhx_toolbar_btn i {
+    float:left;
+    line-height:18px;
+    width:18px;
+    text-align:center;
+    font-size:16px;
+    margin:2px; 
+}
+
+.dhxtoolbar_btn_dis {
+   filter:alpha(opacity=50);    /* IE */
+  -moz-opacity:0.5;             /* 老版Mozilla */
+  -khtml-opacity:0.5;           /* 老版Safari */
+  opacity: 0.5;                 /* 支持opacity的浏览器*/
+}
+/*.dhxtoolbar_btn_dis i {
+    color:#999 !important;
+}*/
+.dhxtoolbar_btn_dis .dhxtoolbar_text {
+     color:#444;
+}
+
+div.gridbox table.obj td {
+    -webkit-user-select: text;
+    -khtml-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+    -o-user-select: text;
+    user-select: text;
+}
+.gridbox {
+-webkit-user-select: text; /* Chrome all / Safari all */
+-moz-user-select: text; /* Firefox all */
+-ms-user-select: text; /* IE 10+ */
+-o-user-select: text;
+user-select: text; 
+}
+
+/* 过滤行 */
+.xhdr table tr:nth-child(3) td {padding:0 !important;}
+.xhdr table tr:nth-child(3) td .filter {padding:0 !important;}
+.xhdr table tr:nth-child(3) td input,.xhdr table tr:nth-child(3) td select {width:100% !important;border:0;padding:0; height:22px;outline:none;}
+
+.gridbox .objbox table tr:hover{background-color:#F8E8B8 !important;}
+.gridbox .objbox table tr:hover a.dhx_grid_btn i{color:#3078D7}
+a.dhx_grid_add i{color:#85D27A;font-size:32px;margin-top:4px;margin-left:3px;}
+a.dhx_grid_add:hover i{color:#5BC24C}
+a.dhx_grid_btn i{font-size:12px;color:#999;padding:5px;border-radius:50%;}
+a.dhx_grid_btn:hover i{color:white !important;background-color:#f60;padding:5px;}

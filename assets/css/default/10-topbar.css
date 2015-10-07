@@ -1,0 +1,154 @@
+/* ==============================================
+   Topbar
+     A. Topbar Menu
+     B. Topbar DropMenu
+=================================================
+  A. Topbar Menu
+================================================= */
+#topbar {
+  z-index: 2;
+  position: relative;
+  width: 100%;
+  min-height: 51px;
+  padding: 10px 21px;
+  background: #fafafa;
+  border-bottom: 1px solid #e0e0e0;
+}
+.topbar-right {
+  float: right;
+}
+.breadcrumb {
+  float: left;
+  position: relative;
+  padding: 2px 25px 0 0;
+  margin-bottom: 0;
+  font-size: 14px;
+  border-radius: 0;
+  background-color: transparent;
+}
+.breadcrumb > li {
+  color: #888;
+  font-size: 12px;
+}
+.breadcrumb > li.crumb-active > a {
+  color: #555;
+  font-size: 18px;
+}
+/*Toggle sidemenu button*/
+#toggle_sidemenu_r i.fa,
+#toggle_sidemenu_r span.glyphicon,
+#toggle_sidemenu_r span.glyphicons {
+  margin-top: 2px;
+}
+/* toggle sidemenu button (when menu is open) */
+body.sb-r-o #toggle_sidemenu_r i.fa,
+body.sb-r-o #toggle_sidemenu_r span.glyphicon,
+body.sb-r-o #toggle_sidemenu_r span.glyphicons {
+  -webkit-transform: scale(-1, 1);
+  transform: scale(-1, 1);
+  color: #999;
+}
+/*toggle right sidebar badge
+*/
+.badge.badge-hero {
+  position: relative;
+  top: -12px;
+  margin-left: -10px;
+  padding: 2px 5px;
+  font-size: 11px;
+}
+/*===============================================
+   B. Topbar Dropmenu
+================================================= */
+#topbar-dropmenu {
+  z-index: 9999;
+  overflow: hidden;
+  display: none;
+  position: relative;
+  padding: 17px 20px 10px;
+  height: auto;
+  width: 100%;
+  background: url("../../../img/patterns/topbar-bg.jpg") repeat -60px top;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.4) inset;
+}
+#topbar-dropmenu:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.4);
+}
+.topbar-menu .metro-tile {
+  opacity: 0;
+  display: block;
+  height: 95px;
+  position: relative;
+  padding: 15px 5px 0;
+  margin-bottom: 8px;
+  border-radius: 4px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.25) !important;
+  transition: background 0.2s ease;
+}
+.topbar-menu .metro-tile:hover,
+.topbar-menu .metro-tile:focus,
+.topbar-menu .metro-tile:active {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.4) !important;
+}
+.topbar-menu .metro-icon {
+  font-size: 44px;
+}
+.topbar-menu .metro-title {
+  position: absolute;
+  bottom: 0;
+  left: 10px;
+  font-size: 11px;
+  font-weight: 600;
+}
+/* topbar menu modal */
+.metro-modal {
+  cursor: pointer;
+  position: fixed;
+  display: none;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 9998;
+  background: rgba(0, 0, 0, 0.6);
+}
+@media (max-width: 700px) {
+  #topbar .breadcrumb {
+    padding-top: 3px;
+    padding-left: 2px;
+  }
+  #topbar .breadcrumb .crumb-active {
+    display: none;
+  }
+  #topbar .breadcrumb > li.crumb-active + li:before {
+    display: none;
+  }
+}
+@media (max-width: 900px) {
+  body.sb-l-m #topbar.affix,
+  body.sb-l-o.sb-l-m #topbar.affix {
+    margin-left: 45px;
+    width: auto;
+  }
+  body.sb-l-o #topbar.affix {
+    margin-left: 230px;
+    width: 100%;
+  }
+}
+#topbar .nav.nav-list-topbar {
+  margin: -10px 15px;
+}
+#topbar .nav.nav-list-topbar li a {
+  padding: 16px 14px 12px;
+}
+#topbar .nav.nav-list-topbar li.active a {
+  border-bottom: 3px solid #4a89dc;
+}

@@ -1,0 +1,96 @@
+﻿<div class="header_col1 header-cell">
+    <i class="logo-w"></i>
+</div>
+<ul class="header_col2 header-cell">
+    <li class="header-cell" style="position: relative;">
+        <a href="javascript:void(0)" data-toggle="dropdown-task">
+            <i class="icon-list"></i>
+            <span class="header_badge header_badge_primary" ng-if="unreadCount(tasks)>0">{{unreadCount(tasks)}}</span>
+        </a>
+        <ul id="dropdown-task" class="dropdown-toggle">
+            <li>
+                <p class="task-title">你有{{tasks.length}}个新任务</p>
+            </li>
+            <li>
+                <div class="dropdown-slimscroll">
+                    <ul style="padding:0;">
+                        <li ng-class="{unread:task.status=='unread'}" ng-repeat="task in tasks">
+                            <a href="#" target="_blank">
+                                 {{task.name}}
+                                <span class="label pull-right {{task.typeCls}}">{{task.type}}</span><br />
+                                <span class="text-muted small">{{task.time}}</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="last">
+                <a href="extra-user-list.html" class="text-right">查看所有任务</a>
+            </li>
+        </ul> 
+    </li>
+    <li class="header-cell">
+        <a href="javascript:void(0)" data-toggle="dropdown-notify"><i class="icon-bell"></i>
+            <span ng-if="unreadCount(notifys)>0" class="header_badge header_badge_success" data-pulsate="{parent:true,onClick:'stop',border:false,speed:1200,reach: 30,delay:5000}">{{unreadCount(notifys)}}</span></a>
+        <ul id="dropdown-notify" class="dropdown-toggle dropdown-notify">
+            <li>
+                <p class="notify-title">你有{{notifys.length}}条新通知</p>
+            </li>
+            <li>
+                <div class="dropdown-slimscroll">
+                    <ul style="padding: 0;">
+                        <li ng-class="{unread:notify.status=='unread'}" ng-repeat="notify in notifys">
+                            <a href="extra-user-list.html" target="_blank">
+                                <span class="label {{notify.bgCls}}"><i class="{{notify.icon}}"></i></span>
+                                {{notify.name}}
+                                <span class="pull-right text-muted small">{{notify.time}}</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="last">
+                <a href="extra-user-list.html" class="text-right">查看所有通知</a>
+            </li>
+        </ul>
+    </li>
+</ul>
+<div id="my_header_right" class="header_col3 header-cell">
+    {{username}}，你好
+</div>
+<ul class="header_col4 header-cell">
+    <li class="header-cell">
+        <a href="javascript:void(0)" class="btn-chat">
+            <i class="fa fa-comments-o"></i>
+            <span class="header_badge header_badge_warning" ng-if="chatNewCount()>0">{{chatNewCount()}}</span>
+        </a>
+    </li>
+    <li class="header-cell">
+        <a href="javascript:void(0)" data-toggle="dropdown-user" style="padding-right: 10px">
+            <i class="icon-user"></i>&nbsp;
+            <span class="fa fa-caret-down" style="font-size: 8px;"></span>
+        </a>
+        <ul id="dropdown-user" class="dropdown-toggle">
+            <li>
+                <div class="row">
+                    <div>
+                        <div class="col1" >
+                            <img class="avatar" ng-src="{{appRoot}}img/avatar/men-27.jpg" alt=""/>
+                            <p><a href="#" class="change-avatar">设置头像</a></p>
+                        </div>
+                        <div class="col2"  ><span>萧秦 员工</span>
+                            <p >xiaoqin@mail.com</p>
+                            <div class="divider"></div>
+                            <a href="#" class="button" >修改配置</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="buttonbar" >
+                        <a href="#" class="button" >修改密码</a>
+                        <a href="#" class="button logout" style="float:right;" >退出登录</a>
+                </div>
+            </li>
+        </ul>
+    </li>
+    <li class="header-cell"><a href="javascript:void(0)" class="btn-template-setting"><i class="icon-settings"></i></a></li>
+</ul>

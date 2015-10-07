@@ -1,0 +1,37 @@
+dhtmlxSuite 4.0.3 what's new
+----------------------------------------------------------
+
+combo - get/post via dhx4.ajax.method configuration added (for srnd mode)
+container - attachScheduler() fixed
+container - attachToolbar() missing border fixed (layoutcell->window->toolbar)
+container - unload with several views fixed
+editor - page autoscroll fixed for firefox 28+
+form - getItemValue fixed for type:calendar (old-value from onChange->getItemValue)
+form - live vaidation for type:select fixed
+form - onButtonClick event no longer fired by right-mouse click
+form - setItemLabel()/getItemLabel() for type:button fixed
+form - type:newcolumn rendering fixed in ie6/ie7
+grid - custom styling for rows fixed
+grid - incorrect data loading for grid with data preloading fixed
+grid - combo cell improved for ie10/11
+grid - combo_v icon fixed
+grid - multiline header export to pdf in split mode fixed
+grid - updateFromXML() in srnd mode fixed
+grid - height of table row in HTML5 doctype fixed
+grid - onOpenEnd in case of loading from json fixed
+grid - update from xml in split mode fixed
+grid - styling of selected rows and header in grid fixed
+grid - combo filter 'select all' mode '&nbsp;' removed, autosize fixed
+grid - styling of grid in split-multi-line mode fixed
+grid - math in Grid and NaN values fixed
+layout - setWidth() for h-mode fixed
+layout - last cell undock() fixed
+layout - progressOff() fixed
+layout - onResizeFinish for 1C pattern fixed
+message - alerts styling in IE fixed
+tabbar - getNumberOfTabs() fixed
+tabbar - tabs-area width increased (max tabs count)
+toolbar - type:input's selection fixed
+tree - autosearch fixed, searching was changed to "contains" logic
+treegrid - styling editor in IE fixed
+

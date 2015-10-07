@@ -1,0 +1,76 @@
+﻿<div dhtmlxtoolbar="toolbar"
+      iconspath='assets/img/btn/'
+      items='[{ id: "new", type: "button", img: "add.png", text: "新增", title: "Tooltip here", action: "addClick"},
+         { id: "edit", type: "button", img: "edit.gif", text: "修改", action: "test"},
+         { id: "del", type: "button", img: "cross.png", imgdis:"cross.png", text: "删除", action: "test", enabled: false}]'></div>
+
+<div class="search_form">
+    <div class="row">
+        <div class="col-xs-9 pln prn">
+            <div class="col-xs-1 control-label">
+                应用编码
+            </div>
+            <div class="col-xs-3 control-value">
+                <input type="text" id="InputText" placeholder="" class="form-control input-sm" ng-model="form.app_id" >
+            </div>
+            <div class="col-xs-1 control-label">
+                应用名称 
+            </div>
+            <div class="col-xs-3 control-value">
+                <input type="text" id="Text1" placeholder="" class="form-control input-sm" ng-model="form.app_name">
+            </div>
+            <div class="col-xs-1 control-label">
+                应用类型
+            </div>
+            <div class="col-xs-3 control-value">
+                <input type="text" placeholder="" class="form-control input-sm" ng-model="form.app_type">
+            </div>
+            <div class="col-xs-1 control-label">
+                当前状态 
+            </div>
+            <div class="col-xs-3 control-value">
+                 <input type="text" placeholder="" class="form-control input-sm" ng-model="form.status">
+            </div>
+            <div class="col-xs-1 control-label">
+                是否多租户
+            </div>
+            <div class="col-xs-3 control-value">
+                <div class="checkbox-custom checkbox-primary" style="height:28px;">
+                    <input type="checkbox" ng-model="form.is_multitenant" id="app_chk_01">
+                    <label style="top:-4px;" for="app_chk_01"></label>
+                </div>
+            </div>
+            <div class="col-xs-1 control-label">
+                 是否平台应用
+            </div>
+            <div class="col-xs-3 control-value">
+                <div class="checkbox-custom checkbox-primary" style="height:28px;">
+                    <input type="checkbox" ng-model="form.is_use_platform" id="app_chk_02">
+                    <label style="top:-4px;" for="app_chk_02"></label>
+                </div>
+            </div>
+            
+        </div>
+        <div class="col-xs-3 control-search" style="text-align:center;">
+            <button class="button button-rounded button-raised button-primary" style="padding:0 15px;" ng-click="searchClick()">
+                <i class="fa fa-search"></i> 查询
+            </button>
+            <button class="button button-rounded button-raised button-action" style="padding:0 15px;" ng-click="clearClick()">
+                <i class="fa fa-tag"></i>
+                清空
+            </button>
+        </div>
+    </div>
+</div>
+
+<div dhtmlxgrid="grid"
+     url='app'
+     params="form"
+     fields='app_id|app_id,app_name,app_name_en,app_type,version,publish_date,is_multitenant,is_use_platform,status'
+     header1='系统编号, 系统名称, 系统英文名, 应用类型, 当前版本, 发布日期, 是否多租户,是否平台应用, 状态'
+     colwidth='100,200,80,150,150,80,150,*'
+     colalign='left,left,left'
+     coltype='ro,ro,ed,ro,ro,ro,ro,ro'
+     colsorting='server,server,server,server,str,int,date'
+     pagingsetting='20,5'
+     autoheight='142'></div>

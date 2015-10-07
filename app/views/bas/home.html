@@ -1,0 +1,96 @@
+﻿    <style type="text/css">
+         #my_toolbar{
+            border-top-width: 0px;
+            border-left-width: 0px;
+            border-right-width: 0px;
+         }
+        .search_form {
+            padding: 5px 15px;
+            min-width:768px;
+        }
+        .control-search {
+            text-align: center;
+            white-space: nowrap;
+            height: 68px;
+            line-height: 68px;
+        }
+        .control-value {
+            padding:3px;
+            padding-right:10px;
+        }
+        .control-label {
+            height:34px;
+            line-height:28px;
+            padding:3px 5px;
+            white-space:nowrap;
+        }
+        .form-control {
+            padding: 3px 6px;
+            height: 28px;
+        }
+        .input-group-addon {
+            min-width:30px;
+            padding:6px;
+        }
+    </style>
+    <div id='my_toolbar'></div>
+    <div class="search_form">
+        <div class="row">
+            <div class="col-xs-9 pln prn">
+                <div class="col-xs-1 control-label">
+                    付款状态 
+                </div>
+                <div class="col-xs-3 control-value">
+                    <input type="text" id="InputText" placeholder="" class="form-control input-sm" ng-model="test" >
+                </div>
+                <div class="col-xs-1 control-label">
+                    label2
+                </div>
+                <div class="col-xs-3 control-value">
+                    <input type="text" id="Text1" placeholder="" class="form-control input-sm">
+                </div>
+                <div class="col-xs-1 control-label">
+                    label3
+                </div>
+                <div class="col-xs-3 control-value">
+                  <div class="input-group"><span class="input-group-addon"><i class="fa fa-phone"></i></span>
+                    <input type="text" placeholder="" class="form-control input-sm">
+                  </div>
+                </div>
+
+                <div class="col-xs-1 control-label">
+                    付款状态
+                </div>
+                <div class="col-xs-3 control-value">
+                    <input type="text" id="Text2" placeholder="" class="form-control input-sm">
+                </div>
+                <div class="col-xs-1 control-label">
+                    label2
+                </div>
+                <div class="col-xs-3 control-value">
+                    <input type="text" id="Text3" placeholder="" class="form-control form-control-shadow input-sm">
+                </div>
+                <div class="col-xs-1 control-label">
+                    label3
+                </div>
+                <div class="col-xs-3 control-value">
+                  <div class="input-group input-group-shadow"><span class="input-group-addon"><i class="fa fa-phone"></i></span>
+                    <input type="text" placeholder="" class="form-control input-sm">
+                  </div>
+                </div>
+            </div>
+            <div class="col-xs-3 control-search" style="text-align:center;">
+                <button class="button button-rounded button-raised button-primary" style="padding:0 15px;">
+                    <i class="fa fa-search"></i> 查询
+                </button>
+ 
+                <button class="button button-rounded button-raised button-action" style="padding:0 15px;">
+                    <i class="fa fa-tag"></i>
+                    清空
+                </button>
+            </div>
+        </div>
+    </div>
+    <div id="gridbox" style="width:100%;height:300px;border-width:1px 0 0 0"></div> 
+    <div id="pagingArea" style="border-width:1px 0 0 0"></div>
+    <div id="recinfoArea"></div>

@@ -1,0 +1,229 @@
+﻿<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <title>权限管理系统</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link href="../../img/logo/chitu-32.png" rel="shortcut icon" type="image/x-icon" />
+    <link href="/assets/lib/dhtmlx/v412_std/skins/default/dhtmlx.css" rel="stylesheet" /> <!--default skyblue terrace web-->
+    <link href="/assets/vendors/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/assets/vendors/bootstrap/css/bootstrap.custom.min.css" rel="stylesheet" />
+    <link href="/assets/vendors/bootstrap-switch/bootstrap-switch.css" rel="stylesheet" />
+    <link href="/assets/vendors/simple-line-icons/css/simple-line-icons.css" rel="stylesheet" />
+    <link href="/assets/vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="/assets/vendors/icheck/skins/all.css" rel="stylesheet" />
+    <link href="/assets/vendors/prettify/prettify.css" rel="stylesheet" />
+    <link href="../../css/fix.css" rel="stylesheet" />
+    <!--[if lte IE 8]>
+        <script src="/assets/lib/ie/html5shiv/html5shiv.min.js"></script>
+        <script src="/assets/lib/ie/es5-shim/es5-shim.min.js"></script>
+        <script src="/assets/lib/ie/json/json3.min.js"></script>
+        <script src="/assets/lib/ie/respond/respond.min.js"></script>
+    <![endif]-->
+
+    <style type="text/css">
+        body {
+            background-color:white;
+            min-width:768px;
+        }
+         #my_toolbar{
+            border-top-width: 0px;
+            border-left-width: 0px;
+            border-right-width: 0px;
+         }
+        /*.control-value {
+            padding:0;
+        }*/
+        .control-search {
+            float:right;
+        }
+        .control-label {
+            /*padding:0;*/
+            padding-left:5px;
+            padding-top:5px;
+            white-space:nowrap;
+        }
+        .col-xs-1, .col-xs-3 {
+            margin-top:5px;
+        }
+        .form-control {
+            height:28px;
+        }
+    </style>
+</head>
+<body ng-controller="myController">
+    <div id='my_toolbar'></div>
+    <div class="container-fluid" style="padding-top:5px;">
+        <div class="row">
+            <div class="col-xs-9 pln prn">
+                <div class="col-xs-1 control-label">
+                    付款状态
+                </div>
+                <div class="col-xs-3 control-value">
+                    <input type="text" id="InputText" placeholder="" class="form-control">
+                </div>
+                <div class="col-xs-1 control-label">
+                    label2
+                </div>
+                <div class="col-xs-3 control-value">
+                    <input type="text" id="Text1" placeholder="" class="form-control">
+                </div>
+                <div class="col-xs-1 control-label">
+                    label3
+                </div>
+                <div class="col-xs-3 control-value">
+                  <div class="input-group"><span class="input-group-addon"><i class="fa fa-phone"></i></span>
+                    <input type="text" placeholder="" class="form-control">
+                  </div>
+                </div>
+
+                <div class="col-xs-1 control-label">
+                    付款状态
+                </div>
+                <div class="col-xs-3 control-value">
+                    <input type="text" id="Text2" placeholder="" class="form-control">
+                </div>
+                <div class="col-xs-1 control-label">
+                    label2
+                </div>
+                <div class="col-xs-3 control-value">
+                    <input type="text" id="Text3" placeholder="" class="form-control form-control-shadow">
+                </div>
+                <div class="col-xs-1 control-label">
+                    label3
+                </div>
+                <div class="col-xs-3 control-value">
+                  <div class="input-group input-group-shadow"><span class="input-group-addon"><i class="fa fa-phone"></i></span>
+                    <input type="text" placeholder="" class="form-control">
+                  </div>
+                </div>
+            </div>
+            <div class="col-xs-3" style="padding-top:8px;text-align:center;">
+                <button class="btn btn-success btn-outlined " style="outline:none;" onfocus="this.blur();">
+                    <i class="fa fa-search"></i>
+                    查询
+                </button>
+                <button class="btn btn-info  btn-outlined " style="outline:none;" onfocus="this.blur();">
+                    <i class="fa fa-tag"></i>
+                    清空
+                </button>
+            </div>
+        </div>
+    </div>
+    <div id="gridbox" style="width:100%;height:300px;margin-top:15px;border-width:1px 0 0 0"></div> 
+    <div id="pagingArea" style="border-width:1px 0 0 0"></div>
+    <div id="recinfoArea"></div>
+    <script src="/assets/lib/dhtmlx/v403_pro/codebase/dhtmlx.js"></script>
+<!--    <script src="/assets/lib/dhtmlx/v403_pro/sources/dhtmlxGrid/codebase/dhtmlxgrid.js"></script>
+    <script src="/assets/lib/dhtmlx/v403_pro/sources/dhtmlxGrid/codebase/ext/dhtmlxgrid_pgn.js"></script>-->
+    <script src="/assets/lib/dhtmlx/dhtmlx.custom.js"></script>
+    <script src="/assets/lib/jquery/jquery-1.11.2.min.js"></script>
+    <script src="/assets/lib/jquery/jquery-ui.js"></script>
+    <script src="/assets/lib/jquery/jquery.cookie.js"></script>
+    <script src="/assets/vendors/jquery-pulsate/jquery.pulsate.custom.js"></script>
+    <script src="/assets/vendors/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+    <script src="/assets/vendors/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/assets/vendors/icheck/icheck.min.js"></script>
+    <script src="/assets/vendors/bootstrap-switch/bootstrap-switch.min.js"></script>
+    <script src="/assets/vendors/prettify/prettify.js"></script>
+    <script src="/assets/lib/angularjs/1.3.9/ie8/angular.js"></script>
+    
+    <script type="text/javascript">
+        
+        !function () {
+            "use strict";
+            var app = angular.module('app', []);
+            app.controller('myController', function () {
+                initUI();
+                
+            });
+        }();
+
+        function initUI() {
+            var myToolbar = new dhtmlXToolbarObject('my_toolbar');
+            myToolbar.setIconsPath("/assets/img/btn/");
+            myToolbar.addButton("open", 2, "打开", "open.gif", "open_dis.gif");
+            myToolbar.addButton("save", 3, "保存", "save.gif", "save_dis.gif");
+
+
+            var mygrid = new dhtmlXGridObject('gridbox');
+            mygrid.setHeader("Sales, Book Title, Author");
+            mygrid.setInitWidths("100,250,*")
+            mygrid.setColAlign("right,left,left")
+            mygrid.setColTypes("ro,ro,ed");
+            mygrid.setColSorting("int,str,str")
+            mygrid.enablePaging(true, 10, 5, "pagingArea", true, "recinfoArea");
+            mygrid.setPagingSkin("toolbar", "dhx_skyblue");
+            mygrid.setImagePath("/assets/lib/dhtmlx/v403_pro/skins/skyblue/imgs/");
+            mygrid.init();
+            mygrid.i18n.paging = {
+                results: "结果",
+                records: "当前",
+                to: " - ",
+                page: "页",
+                perpage: "行每页",
+                first: "首页",
+                previous: "上一页",
+                found: "找到数据",
+                next: "下一页",
+                last: "末页",
+                of: " 的 ",
+                notfound: "No Records Found"
+            };
+
+            var resizeGrid = function () {
+                var height = $(window).height() - 149;
+                var width = $(window).width();
+                $("#gridbox").height(height);
+                $("#gridbox").width(width + 2);
+                mygrid.setSizes();
+            };
+            $(window).resize(resizeGrid);
+            resizeGrid();
+
+            var gridData = {
+                rows: [
+                    { id: 1001, data: ["100", "A Time to Kill", "John Grisham", "12.99", "1", "05/01/1998"] },
+                    { id: 1002, data: ["1000", "Blood and Smoke", "Stephen King", "0", "1", "01/01/2000"] },
+                    { id: 1003, data: ["-200", "The Rainmaker", "John Grisham", "7.99", "0", "12/01/2001"] },
+                    { id: 1004, data: ["350", "The Green Mile", "Stephen King", "11.10", "1", "01/01/1992"] },
+                    { id: 1005, data: ["700", "Misery", "Stephen King", "7.70", "0", "01/01/2003"] },
+                    { id: 1006, data: ["-1200", "The Dark Half", "Stephen King", "0", "0", "10/30/1999"] },
+                    { id: 1011, data: ["100", "A Time to Kill", "John Grisham", "12.99", "1", "05/01/1998"] },
+                    { id: 1012, data: ["1000", "Blood and Smoke", "Stephen King", "0", "1", "01/01/2000"] },
+                    { id: 1013, data: ["-200", "The Rainmaker", "John Grisham", "7.99", "0", "12/01/2001"] },
+                    { id: 1014, data: ["350", "The Green Mile", "Stephen King", "11.10", "1", "01/01/1992"] },
+                    { id: 1015, data: ["700", "Misery", "Stephen King", "7.70", "0", "01/01/2003"] },
+                    { id: 1016, data: ["-1200", "The Dark Half", "Stephen King", "0", "0", "10/30/1999"] },
+                    { id: 1021, data: ["100", "A Time to Kill", "John Grisham", "12.99", "1", "05/01/1998"] },
+                    { id: 1022, data: ["1000", "Blood and Smoke", "Stephen King", "0", "1", "01/01/2000"] },
+                    { id: 1023, data: ["-200", "The Rainmaker", "John Grisham", "7.99", "0", "12/01/2001"] },
+                    { id: 1024, data: ["350", "The Green Mile", "Stephen King", "11.10", "1", "01/01/1992"] },
+                    { id: 1025, data: ["700", "Misery", "Stephen King", "7.70", "0", "01/01/2003"] },
+                    { id: 1026, data: ["-1200", "The Dark Half", "Stephen King", "0", "0", "10/30/1999"] },
+                    { id: 1031, data: ["100", "A Time to Kill", "John Grisham", "12.99", "1", "05/01/1998"] },
+                    { id: 1032, data: ["1000", "Blood and Smoke", "Stephen King", "0", "1", "01/01/2000"] },
+                    { id: 1033, data: ["-200", "The Rainmaker", "John Grisham", "7.99", "0", "12/01/2001"] },
+                    { id: 1034, data: ["350", "The Green Mile", "Stephen King", "11.10", "1", "01/01/1992"] },
+                    { id: 1035, data: ["700", "Misery", "Stephen King", "7.70", "0", "01/01/2003"] },
+                    { id: 1036, data: ["-1200", "The Dark Half", "Stephen King", "0", "0", "10/30/1999"] },
+                    { id: 1041, data: ["100", "A Time to Kill", "John Grisham", "12.99", "1", "05/01/1998"] },
+                    { id: 1042, data: ["1000", "Blood and Smoke", "Stephen King", "0", "1", "01/01/2000"] },
+                    { id: 1043, data: ["-200", "The Rainmaker", "John Grisham", "7.99", "0", "12/01/2001"] },
+                    { id: 1044, data: ["350", "The Green Mile", "Stephen King", "11.10", "1", "01/01/1992"] },
+                    { id: 1045, data: ["700", "Misery", "Stephen King", "7.70", "0", "01/01/2003"] },
+                    { id: 1046, data: ["-1200", "The Dark Half", "Stephen King", "0", "0", "10/30/1999"] },
+                    { id: 1051, data: ["100", "A Time to Kill", "John Grisham", "12.99", "1", "05/01/1998"] },
+                    { id: 1052, data: ["1000", "Blood and Smoke", "Stephen King", "0", "1", "01/01/2000"] },
+                    { id: 1053, data: ["-200", "The Rainmaker", "John Grisham", "7.99", "0", "12/01/2001"] },
+                    { id: 1054, data: ["350", "The Green Mile", "Stephen King", "11.10", "1", "01/01/1992"] },
+                    { id: 1055, data: ["700", "Misery", "Stephen King", "7.70", "0", "01/01/2003"] },
+                    { id: 1056, data: ["-1200", "The Dark Half", "Stephen King", "0", "0", "10/30/1999"] }
+                ]
+            };
+            mygrid.parse(gridData, "json"); //takes the name and format of the data source
+
+        }
+    </script>
+</body>
+</html>

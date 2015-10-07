@@ -1,0 +1,82 @@
+﻿<div dhtmlxtoolbar="toolbar"
+      iconspath='assets/img/btn/'
+      items='[
+         { id: "new", type: "button", img: "add.png", text: "新增", title: "Tooltip here", action: "addClick"},
+         { id: "edit", type: "button", img: "edit.gif", text: "修改", action: "test"},
+         { id: "del", type: "button", img: "cross.png", imgdis:"cross.png", text: "删除", action: "test", enabled: false}]'></div>
+
+<!--{ type: "separator" },
+{ id: "test", type: "button",img:"fa fa-comments", imgdis: "green", text: "测试", title: "Tooltip test" }]-->
+
+<div class="search_form">
+    <div class="row">
+        <div class="col-xs-9 pln prn">
+            <div class="col-xs-1 control-label">
+                商户编码
+            </div>
+            <div class="col-xs-3 control-value">
+                <input type="text" id="InputText" placeholder="" class="form-control input-sm" ng-model="form.tenant_id" >
+            </div>
+            <div class="col-xs-1 control-label">
+                商户名称 
+            </div>
+            <div class="col-xs-3 control-value">
+                <input type="text" id="Text1" placeholder="" class="form-control input-sm" ng-model="form.tenant_name">
+            </div>
+            <div class="col-xs-1 control-label">
+                责任人
+            </div>
+            <div class="col-xs-3 control-value">
+                <input type="text" id="Text2" placeholder="" class="form-control input-sm" ng-model="form.charge_person">
+            </div>
+            <div class="col-xs-1 control-label">
+                商户地址 
+            </div>
+            <div class="col-xs-3 control-value">
+                <div class="input-group input-group-shadow"><span class="input-group-addon"><i class="fa fa-building"></i></span>
+                <input type="text" placeholder="" class="form-control input-sm" ng-model="form.addr">
+                </div>
+            </div>
+            <div class="col-xs-1 control-label">
+                联系电话
+            </div>
+            <div class="col-xs-3 control-value">
+                <div class="input-group"><span class="input-group-addon"><i class="fa fa-phone"></i></span>
+                <input type="text" placeholder="" class="form-control input-sm" ng-model="form.tel">
+                </div>
+            </div>
+            <div class="col-xs-1 control-label">
+                是否启用
+            </div>
+            <div class="col-xs-3 control-value">
+                <div class="checkbox-custom checkbox-primary" style="height:28px;">
+                    <input type="checkbox" ng-model="form.is_enable" id="tenant_chk_01">
+                    <label style="top:-4px;" for="tenant_chk_01"></label>
+                </div>
+            </div>
+            
+        </div>
+        <div class="col-xs-3 control-search" style="text-align:center;">
+            <button class="button button-rounded button-raised button-primary" style="padding:0 15px;" ng-click="searchClick()">
+                <i class="fa fa-search"></i> 查询
+            </button>
+ 
+            <button class="button button-rounded button-raised button-action" style="padding:0 15px;" ng-click="clearClick()">
+                <i class="fa fa-tag"></i>
+                清空
+            </button>
+        </div>
+    </div>
+</div>
+
+<div dhtmlxgrid="grid"
+     url='tenant'
+     params="form"
+     fields='tenant_id|tenant_id,tenant_name,charge_person,tel,mobile,addr,is_enable,memo'
+     header1='商户编码, 商户名称, 责任人, 电话, 手机, 地址, 是否启用, 备注'
+     colwidth='70,180,60,80,100,260,70,*'
+     colalign='left,left,left,left,left,left,center'
+     coltype='ro,ro,ed,ro,ro,ro,roch,ro'
+     colsorting='server,server,server,server,server,server,server'
+     pagingsetting='20,5'
+     autoheight='142'></div>

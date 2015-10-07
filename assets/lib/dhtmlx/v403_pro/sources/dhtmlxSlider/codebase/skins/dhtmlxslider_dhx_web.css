@@ -1,0 +1,75 @@
+/*
+Product Name: dhtmlxSuite 
+Version: 4.0.3 
+Edition: Professional 
+License: content of this file is covered by DHTMLX Commercial or Enterprise license. Usage without proper license is prohibited. To obtain it contact sales@dhtmlx.com
+Copyright UAB Dinamenta http://www.dhtmlx.com
+*/
+
+/* skin detected, extra file: skins/dhx_web.less */
+
+.dhxslider_skin_detect {
+	position: absolute;
+	left: 0px;
+	top: -100px;
+	margin: 0;
+	padding: 0;
+	border: 0px solid white;
+	width: 20px;
+	height: 10px;
+	overflow: hidden;
+}
+.dhtmlxslider_dhx_web .dhxsl_hidden {
+	display: none;
+}
+.dhtmlxslider_dhx_web .dhxsl_container {
+	position: relative;
+	float: left;
+	clear: left;
+	margin: 0px;
+	padding: 1px;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+}
+.dhtmlxslider_dhx_web .dhxsl_container.dhxsl_cont_hr {
+	margin-top: 5px;
+}
+.dhtmlxslider_dhx_web .dhxsl_container.dhxsl_cont_vr {
+	margin-left: 5px;
+}
+.dhtmlxslider_dhx_web .dhxsl_runner {
+	position: absolute;
+	width: 12px;
+	height: 12px;
+	border: 1px solid #3da0e3;
+	background-color: #3da0e3;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+.dhtmlxslider_dhx_web .dhxsl_runner_dis {
+	border: 1px solid #999999;
+	background-color: #999999;
+}
+.dhtmlxslider_dhx_web .dhxsl_track {
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	border: 1px solid #c7c7c7;
+	background-color: #ffffff;
+}
+.dhtmlxslider_dhx_web .dhxsl_cont_vr .dhxsl_track {
+	height: 100%;
+	width: 6px;
+}
+.dhtmlxslider_dhx_web .dhxsl_cont_hr .dhxsl_track {
+	width: 100%;
+	height: 6px;
+}
+.dhtmlxslider_dhx_web .dhxsl_track_dis {
+	border: 1px solid #d9d9d9;
+	background-color: #f2f2f2;
+}

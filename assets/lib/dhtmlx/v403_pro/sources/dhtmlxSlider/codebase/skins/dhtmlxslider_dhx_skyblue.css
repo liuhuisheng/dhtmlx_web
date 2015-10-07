@@ -1,0 +1,82 @@
+/*
+Product Name: dhtmlxSuite 
+Version: 4.0.3 
+Edition: Professional 
+License: content of this file is covered by DHTMLX Commercial or Enterprise license. Usage without proper license is prohibited. To obtain it contact sales@dhtmlx.com
+Copyright UAB Dinamenta http://www.dhtmlx.com
+*/
+
+/* skin detected, extra file: skins/dhx_skyblue.less */
+
+.dhxslider_skin_detect {
+	position: absolute;
+	left: 0px;
+	top: -100px;
+	border: 0px solid white;
+	width: 10px;
+	height: 10px;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+.dhtmlxslider_dhx_skyblue .dhxsl_hidden {
+	display: none;
+}
+.dhtmlxslider_dhx_skyblue .dhxsl_container {
+	position: relative;
+	float: left;
+	clear: left;
+	margin: 0px;
+	padding: 1px;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+	-ms-user-select: none;
+}
+.dhtmlxslider_dhx_skyblue .dhxsl_container.dhxsl_cont_hr {
+	margin-top: 6px;
+}
+.dhtmlxslider_dhx_skyblue .dhxsl_container.dhxsl_cont_vr {
+	margin-left: 6px;
+}
+.dhtmlxslider_dhx_skyblue .dhxsl_runner {
+	position: absolute;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	width: 16px;
+	height: 16px;
+	border: 1px solid #a4bed4;
+	border-radius: 2px;
+	background-color: #f1f7ff;
+	background: linear-gradient(#f1f7ff,#e2efff);
+	filter: progid:DXImageTransform.Microsoft.Gradient(gradientType=0,startColorStr=#f1f7ff,endColorStr=#e2efff) progid:DXImageTransform.Microsoft.Alpha(opacity=100);
+}
+.dhtmlxslider_dhx_skyblue .dhxsl_runner_dis {
+	border-color: #c9c9c9;
+	background-color: #e8e8e8;
+	background: linear-gradient(#e8e8e8,#dedede);
+	filter: progid:DXImageTransform.Microsoft.Gradient(gradientType=0,startColorStr=#e8e8e8,endColorStr=#dedede) progid:DXImageTransform.Microsoft.Alpha(opacity=100);
+}
+.dhtmlxslider_dhx_skyblue .dhxsl_track {
+	border: 1px solid #a4bed4;
+	border-radius: 2px;
+	background-color: white;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+.dhtmlxslider_dhx_skyblue .dhxsl_cont_vr .dhxsl_track {
+	height: 100%;
+	width: 3px;
+}
+.dhtmlxslider_dhx_skyblue .dhxsl_cont_hr .dhxsl_track {
+	width: 100%;
+	height: 3px;
+}
+.dhtmlxslider_dhx_skyblue .dhxsl_track_dis {
+	border: 1px solid #c9c9c9;
+	background-color: #f0f0f0;
+}

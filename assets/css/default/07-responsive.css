@@ -1,0 +1,644 @@
+/* ==============================================
+   III. RESPONSIVE STYLES
+      A. Header
+	  B. Content
+	  C. Sidebar
+	  D. Dashboard.html
+	  	  
+* These styles control various aspects of the
+* site which benefit from being responsive 
+================================================= 
+  B. Content Responsive Styles
+================================================= */
+#content {
+  padding: 15px 8px 40px 11px;
+}
+/* content padding on large resolutions */
+@media (min-width: 1100px) {
+  #content {
+    padding: 25px 20px 50px 21px;
+  }
+}
+/* Adds top padding to md columns as a spacer
+ * when they are mobile stacked */
+@media (max-width: 991px) {
+  #content .col-md-2 + .col-md-2,
+  #content .col-md-2 + .col-md-4,
+  #content .col-md-2 + .col-md-6,
+  #content .col-md-4 + .col-md-2,
+  #content .col-md-4 + .col-md-4,
+  #content .col-md-4 + .col-md-6,
+  #content .col-md-6 + .col-md-2,
+  #content .col-md-6 + .col-md-4,
+  #content .col-md-6 + .col-md-6 {
+    padding-top: 10px;
+  }
+}
+@media (max-width: 815px) {
+  #content .panel .panel-body {
+    overflow: hidden !important;
+    min-width: 0 !important;
+  }
+}
+/*=============================================== 
+  B. Topbar Responsive Styles
+================================================= */
+@media (max-width: 815px) {
+  #topbar {
+    padding: 10px 6px 10px 14px !important;
+  }
+  #topbar .topbar-dropdown {
+    display: none !important;
+  }
+}
+/* ==============================================
+   Navbar
+================================================= */
+.navbar {
+  z-index: 1030;
+  margin-bottom: 0;
+  height: 60px;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+/*navbar menu*/
+.navbar .nav {
+  margin: 0;
+}
+.navbar .nav > li {
+  float: left;
+}
+.navbar .nav > li > a {
+  color: #777;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  height: 59px;
+  max-height: 59px;
+}
+.navbar .nav > li.open > a,
+.navbar .nav > li:hover > a,
+.navbar .nav > li:focus > a,
+.navbar .nav > li.active > a,
+.navbar .nav > li > a:hover,
+.navbar .nav > li > a:focus {
+  color: #333;
+  background-color: #DDD;
+}
+.navbar .nav > li.dropdown.open .dropdown-menu {
+  margin-top: 10px;
+  border-top: 3px solid #4a89dc;
+  border-radius: 2px;
+}
+.navbar .nav > li.dropdown.open .dropdown-menu:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  right: 8px;
+  bottom: 100%;
+  border-width: 0 10px 10px;
+  border-bottom-color: #4a89dc;
+}
+/*navbranding*/
+.navbar-branding {
+  position: relative;
+  overflow: hidden;
+  float: left;
+  width: 230px;
+  height: 60px;
+  background-color: #1f70a8;
+  margin-right: 10px;
+}
+.navbar-branding a.navbar-brand {
+  height: 60px;
+  line-height: 60px;
+  padding: 0;
+  padding-left: 18px;
+  color: #777;
+  font-size: 17px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+}
+/*navbar toggle sidemenu button*/
+#toggle_sidemenu_l {
+  float: right;
+  cursor: pointer;
+  font-size: 16px;
+  color: #fff;
+  line-height: 58px;
+  max-height: 60px;
+  width: 60px;
+  text-align: center;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+#toggle_sidemenu_l:hover {
+  color: #DDD;
+}
+/*left nav menu*/
+.navbar-nav.navbar-left {
+  float: left;
+  position: relative;
+  max-height: 60px;
+}
+.navbar-nav.navbar-left > li > a {
+  padding-right: 12px;
+  padding-left: 12px;
+}
+/*right nav menu*/
+.navbar-nav.navbar-right,
+.navbar-nav.navbar-right:last-child {
+  float: right;
+  margin: 0 15px 0 0;
+}
+/*navbar forms*/
+.navbar-form {
+  margin-top: 17px;
+  margin-bottom: 17px;
+}
+.navbar-form.navbar-search input {
+  height: 26px;
+  padding: 0 12px;
+  border-radius: 20px;
+  border-color: transparent;
+  box-shadow: none;
+  -webkit-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+/*navbar dropdown, child menu item slide effect*/
+.dropdown-item-slide .dropdown-menu li.item-1,
+.dropdown-item-slide .dropdown-menu li.item-2,
+.dropdown-item-slide .dropdown-menu li.item-3,
+.dropdown-item-slide .dropdown-menu li.item-4,
+.dropdown-item-slide .dropdown-menu li.item-5 {
+  -webkit-transform-origin: 20% 20%;
+  -o-transform-origin: 20% 20%;
+  transform-origin: 20% 20%;
+  -webkit-transform: perspective(350px) rotateX(-90deg);
+  -o-transform: perspective(350px) rotateX(-90deg);
+  transform: perspective(350px) rotateX(-90deg);
+}
+.dropdown-item-slide.slide-open .dropdown-menu li {
+  -webkit-transform: perspective(350px) rotateX(0deg);
+  -o-transform: perspective(350px) rotateX(0deg);
+  transform: perspective(350px) rotateX(0deg);
+  -webkit-transition: 0.2s linear 0s;
+  -o-transition: 0.2s linear 0s;
+  transition: 0.2s linear 0s;
+}
+.dropdown-item-slide.slide-open .dropdown-menu li.item-2 {
+  -webkit-transition-delay: 0.1s;
+  -o-transition-delay: 0.1s;
+  transition-delay: 0.1s;
+}
+.dropdown-item-slide.slide-open .dropdown-menu li.item-3 {
+  -webkit-transition-delay: 0.2s;
+  -o-transition-delay: 0.2s;
+  transition-delay: 0.2s;
+}
+.dropdown-item-slide.slide-open .dropdown-menu li.item-4 {
+  -o-transition-delay: 0.3s;
+  transition-delay: 0.3s;
+}
+.dropdown-item-slide.slide-open .dropdown-menu li.item-5 {
+  -webkit-transition-delay: 0.4s;
+  -o-transition-delay: 0.4s;
+  transition-delay: 0.4s;
+}
+/*navbar dropdown menu item hover effect*/
+li.dropdown-hover:hover,
+.dropdown-hover li:hover {
+  background: #f5f5f5;
+  -webkit-transition-delay: 0s !important;
+  -o-transition-delay: 0s !important;
+  transition-delay: 0s !important;
+}
+/*navbar dropdown menu item hover border effects*/
+li.dropdown-border-hover,
+.dropdown-border-hover li {
+  border-left: 3px solid transparent;
+}
+li.dropdown-border-hover:hover,
+.dropdown-border-hover li:hover {
+  background: #f8f8f8;
+  border-left-color: #4a89dc;
+  -webkit-transition-delay: 0s !important;
+  -o-transition-delay: 0s !important;
+  transition-delay: 0s !important;
+  -webkit-transition: all linear 0s !important;
+  -o-transition: all linear 0s !important;
+  transition: all linear 0s !important;
+}
+/*multiselects in navbar user dropdown menu */
+.navbar .dropdown.open .btn-group.open .multiselect-container.dropdown-menu {
+  margin-top: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1) !important;
+  border-color: rgba(0, 0, 0, 0.1);
+}
+.navbar .dropdown.open .btn-group.open .multiselect-container.dropdown-menu:after {
+  display: none;
+}
+#user-role + .btn-group > button.multiselect {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+#user-status + .btn-group .multiselect-container.dropdown-menu {
+  right: auto !important;
+  left: 0 !important;
+}
+#user-status + .btn-group .multiselect-container.dropdown-menu,
+#user-role + .btn-group .multiselect-container.dropdown-menu {
+  top: 0 !important;
+  position: relative !important;
+  margin-top: 9px;
+  margin-bottom: 3px;
+  width: 212px;
+}
+#user-status + .btn-group .multiselect-container.dropdown-menu > li:first-child,
+#user-role + .btn-group .multiselect-container.dropdown-menu > li:first-child,
+#user-status + .btn-group .multiselect-container.dropdown-menu > li:first-child label,
+#user-role + .btn-group .multiselect-container.dropdown-menu > li:first-child label {
+  cursor: pointer;
+  position: relative;
+}
+#user-status + .btn-group .multiselect-container.dropdown-menu > li:first-child:after,
+#user-role + .btn-group .multiselect-container.dropdown-menu > li:first-child:after {
+  content: "\f00d";
+  font-family: "FontAwesome";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  top: 6px;
+  right: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #AAA;
+  -webkit-transition: color 0.15s ease;
+  transition: color 0.15s ease;
+}
+#user-status + .btn-group .multiselect-container.dropdown-menu > li:first-child:hover:after,
+#user-role + .btn-group .multiselect-container.dropdown-menu > li:first-child:hover:after {
+  color: #4a89dc;
+}
+/* If navbar has a contextual bg we make menu links white*/
+.navbar[class*='bg-'] .navbar-brand,
+.navbar[class*='bg-'] .nav > li > a,
+.navbar[class*='bg-'] .nav > li.open > a {
+  color: #fff;
+}
+.navbar.bg-primary {
+  background-color: #4a89dc !important;
+  color: #f5f8fd;
+}
+.navbar.bg-primary.navbar .nav > li.open > a,
+.navbar.bg-primary.navbar .nav > li:hover > a,
+.navbar.bg-primary.navbar .nav > li:focus > a,
+.navbar.bg-primary.navbar .nav > li.active > a,
+.navbar.bg-primary.navbar .nav > li > a:hover,
+.navbar.bg-primary.navbar .nav > li > a:focus {
+  color: #FFF;
+  background-color: #3078d7;
+}
+.navbar.bg-primary.navbar .nav > li.dropdown.open .dropdown-menu {
+  border-top-color: #4a89dc;
+}
+.navbar.bg-primary.navbar .nav > li.dropdown.open .dropdown-menu:after {
+  border-bottom-color: #4a89dc;
+}
+.navbar.bg-primary.navbar .nav > li.dropdown.open .dropdown-menu:after {
+  border-bottom-color: #4a89dc;
+}
+.navbar.bg-success {
+  background-color: #70ca63 !important;
+  color: #fcfefb;
+}
+.navbar.bg-success.navbar .nav > li.open > a,
+.navbar.bg-success.navbar .nav > li:hover > a,
+.navbar.bg-success.navbar .nav > li:focus > a,
+.navbar.bg-success.navbar .nav > li.active > a,
+.navbar.bg-success.navbar .nav > li > a:hover,
+.navbar.bg-success.navbar .nav > li > a:focus {
+  color: #FFF;
+  background-color: #5bc24c;
+}
+.navbar.bg-success.navbar .nav > li.dropdown.open .dropdown-menu {
+  border-top-color: #70ca63;
+}
+.navbar.bg-success.navbar .nav > li.dropdown.open .dropdown-menu:after {
+  border-bottom-color: #70ca63;
+}
+.navbar.bg-success.navbar .nav > li.dropdown.open .dropdown-menu:after {
+  border-bottom-color: #70ca63;
+}
+.navbar.bg-info {
+  background-color: #3bafda !important;
+  color: #e7f5fa;
+}
+.navbar.bg-info.navbar .nav > li.open > a,
+.navbar.bg-info.navbar .nav > li:hover > a,
+.navbar.bg-info.navbar .nav > li:focus > a,
+.navbar.bg-info.navbar .nav > li.active > a,
+.navbar.bg-info.navbar .nav > li > a:hover,
+.navbar.bg-info.navbar .nav > li > a:focus {
+  color: #FFF;
+  background-color: #27a2cf;
+}
+.navbar.bg-info.navbar .nav > li.dropdown.open .dropdown-menu {
+  border-top-color: #3bafda;
+}
+.navbar.bg-info.navbar .nav > li.dropdown.open .dropdown-menu:after {
+  border-bottom-color: #3bafda;
+}
+.navbar.bg-info.navbar .nav > li.dropdown.open .dropdown-menu:after {
+  border-bottom-color: #3bafda;
+}
+.navbar.bg-warning {
+  background-color: #f6bb42 !important;
+  color: #ffffff;
+}
+.navbar.bg-warning.navbar .nav > li.open > a,
+.navbar.bg-warning.navbar .nav > li:hover > a,
+.navbar.bg-warning.navbar .nav > li:focus > a,
+.navbar.bg-warning.navbar .nav > li.active > a,
+.navbar.bg-warning.navbar .nav > li > a:hover,
+.navbar.bg-warning.navbar .nav > li > a:focus {
+  color: #FFF;
+  background-color: #f5b025;
+}
+.navbar.bg-warning.navbar .nav > li.dropdown.open .dropdown-menu {
+  border-top-color: #f6bb42;
+}
+.navbar.bg-warning.navbar .nav > li.dropdown.open .dropdown-menu:after {
+  border-bottom-color: #f6bb42;
+}
+.navbar.bg-warning.navbar .nav > li.dropdown.open .dropdown-menu:after {
+  border-bottom-color: #f6bb42;
+}
+.navbar.bg-danger {
+  background-color: #e9573f !important;
+  color: #fef7f6;
+}
+.navbar.bg-danger.navbar .nav > li.open > a,
+.navbar.bg-danger.navbar .nav > li:hover > a,
+.navbar.bg-danger.navbar .nav > li:focus > a,
+.navbar.bg-danger.navbar .nav > li.active > a,
+.navbar.bg-danger.navbar .nav > li > a:hover,
+.navbar.bg-danger.navbar .nav > li > a:focus {
+  color: #FFF;
+  background-color: #e63f24;
+}
+.navbar.bg-danger.navbar .nav > li.dropdown.open .dropdown-menu {
+  border-top-color: #e9573f;
+}
+.navbar.bg-danger.navbar .nav > li.dropdown.open .dropdown-menu:after {
+  border-bottom-color: #e9573f;
+}
+.navbar.bg-danger.navbar .nav > li.dropdown.open .dropdown-menu:after {
+  border-bottom-color: #e9573f;
+}
+.navbar.bg-alert {
+  background-color: #967adc !important;
+  color: #ffffff;
+}
+.navbar.bg-alert.navbar .nav > li.open > a,
+.navbar.bg-alert.navbar .nav > li:hover > a,
+.navbar.bg-alert.navbar .nav > li:focus > a,
+.navbar.bg-alert.navbar .nav > li.active > a,
+.navbar.bg-alert.navbar .nav > li > a:hover,
+.navbar.bg-alert.navbar .nav > li > a:focus {
+  color: #FFF;
+  background-color: #8362d6;
+}
+.navbar.bg-alert.navbar .nav > li.dropdown.open .dropdown-menu {
+  border-top-color: #967adc;
+}
+.navbar.bg-alert.navbar .nav > li.dropdown.open .dropdown-menu:after {
+  border-bottom-color: #967adc;
+}
+.navbar.bg-alert.navbar .nav > li.dropdown.open .dropdown-menu:after {
+  border-bottom-color: #967adc;
+}
+.navbar.bg-system {
+  background-color: #37bc9b !important;
+  color: #cef1e8;
+}
+.navbar.bg-system.navbar .nav > li.open > a,
+.navbar.bg-system.navbar .nav > li:hover > a,
+.navbar.bg-system.navbar .nav > li:focus > a,
+.navbar.bg-system.navbar .nav > li.active > a,
+.navbar.bg-system.navbar .nav > li > a:hover,
+.navbar.bg-system.navbar .nav > li > a:focus {
+  color: #FFF;
+  background-color: #30a487;
+}
+.navbar.bg-system.navbar .nav > li.dropdown.open .dropdown-menu {
+  border-top-color: #37bc9b;
+}
+.navbar.bg-system.navbar .nav > li.dropdown.open .dropdown-menu:after {
+  border-bottom-color: #37bc9b;
+}
+.navbar.bg-system.navbar .nav > li.dropdown.open .dropdown-menu:after {
+  border-bottom-color: #37bc9b;
+}
+.navbar.bg-dark {
+  background-color: #3b3f4f !important;
+  color: #9fa4b7;
+}
+.navbar.bg-dark.navbar .nav > li.open > a,
+.navbar.bg-dark.navbar .nav > li:hover > a,
+.navbar.bg-dark.navbar .nav > li:focus > a,
+.navbar.bg-dark.navbar .nav > li.active > a,
+.navbar.bg-dark.navbar .nav > li > a:hover,
+.navbar.bg-dark.navbar .nav > li > a:focus {
+  color: #FFF;
+  background-color: #2e313d;
+}
+.navbar.bg-dark.navbar .nav > li.dropdown.open .dropdown-menu {
+  border-top-color: #3b3f4f;
+}
+.navbar.bg-dark.navbar .nav > li.dropdown.open .dropdown-menu:after {
+  border-bottom-color: #3b3f4f;
+}
+.navbar.bg-dark.navbar .nav > li.dropdown.open .dropdown-menu:after {
+  border-bottom-color: #3b3f4f;
+}
+.navbar.bg-light {
+  color: #666;
+  background-color: #FFF !important;
+  border-bottom: 1px solid #E2E2E2;
+}
+.navbar.bg-light .navbar-branding {
+  background-color: #FFF !important;
+  border-bottom: 1px solid #E6E6E6;
+}
+.navbar.bg-light .navbar-form.navbar-search input {
+  border-color: #EEE;
+}
+.navbar.bg-light .navbar-form.navbar-search input:focus {
+  background-color: #fafafa;
+  border-color: #f0f0f0;
+}
+.navbar.bg-light .navbar-brand,
+.navbar.bg-light .nav > li > a,
+.navbar.bg-light .nav > li.open > a {
+  color: #666;
+}
+.navbar.bg-light #toggle_sidemenu_l,
+.navbar.bg-light #toggle_sidemenu_l:hover,
+.navbar.bg-light #toggle_sidemenu_l:focus {
+  color: #666;
+}
+.navbar.bg-light.navbar .nav > li.open > a,
+.navbar.bg-light.navbar .nav > li:hover > a,
+.navbar.bg-light.navbar .nav > li:focus > a,
+.navbar.bg-light.navbar .nav > li.active > a,
+.navbar.bg-light.navbar .nav > li > a:hover,
+.navbar.bg-light.navbar .nav > li > a:focus {
+  color: #222;
+  background-color: #f7f7f7;
+}
+.navbar.bg-light.navbar .nav > li.dropdown.open .dropdown-menu {
+  border-top-color: #999;
+}
+.navbar.bg-light.navbar .nav > li.dropdown.open .dropdown-menu:after {
+  border-bottom-color: #999;
+}
+.navbar.bg-light.navbar .nav > li.dropdown.open .dropdown-menu:after {
+  border-bottom-color: #999;
+}
+/* Modify whitespace for user menu dropdown - Firefox alignment bug fix */
+.navbar .navbar-right > li:last-child > .dropdown-menu > li > a {
+  white-space: inherit;
+}
+@media (max-width: 1100px) {
+  .navbar .navbar-right:last-child {
+    margin-right: 5px;
+  }
+  .navbar .navbar-right > li:last-child > a > img {
+    margin-right: 5px !important;
+  }
+  .navbar .navbar-right > li:last-child > a > span {
+    display: none;
+  }
+  .navbar .navbar-right > li:last-child > a > span.caret {
+    display: inline-block;
+  }
+  .navbar-form.navbar-search {
+    padding: 21px 6px 19px;
+    margin: 0;
+    cursor: pointer;
+    width: auto;
+    float: left;
+  }
+  .navbar-form.navbar-search .form-group {
+    margin: 0 !important;
+  }
+  .navbar-form.navbar-search:after {
+    content: "\f02e";
+    position: relative;
+    font: normal normal 16px octicons;
+    line-height: 1;
+    display: inline-block;
+    text-decoration: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  .navbar-form.navbar-search input {
+    opacity: 0;
+    z-index: -1;
+    visibility: hidden;
+    position: absolute;
+    top: -60px;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    margin: 0;
+    font-size: 24px;
+    color: #AAA;
+    border-radius: 0;
+    border: 0;
+    border-bottom: 1px solid #EEE;
+    text-align: center;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+  .navbar-form.navbar-search input:focus,
+  .navbar.bg-light .navbar-form.navbar-search input:focus {
+    background-color: #FFF;
+  }
+  .navbar-form.navbar-search.search-open input {
+    top: 0;
+    opacity: 1;
+    visibility: visible;
+    z-index: 1040;
+  }
+  .navbar-form.navbar-search .search-remove {
+    display: none;
+    z-index: 1040;
+    position: absolute;
+    color: #AAA;
+    top: 0;
+    right: 0;
+    height: 60px;
+    line-height: 59px;
+    padding-left: 15px;
+    padding-right: 25px;
+  }
+  .navbar-form.navbar-search .search-remove:after {
+    position: relative;
+    content: "\e014";
+    font-family: 'Glyphicons Halflings';
+    text-align: center;
+    font-size: 20px;
+  }
+  .navbar-form.navbar-search.search-open .search-remove:hover {
+    color: #ee7f6d;
+  }
+}
+@media (max-width: 599px) {
+  .sb-l-m .navbar > .navbar-right,
+  .navbar .navbar-nav > li.dropdown {
+    position: static !important;
+  }
+  .navbar .navbar-right:last-child {
+    margin-right: 0;
+  }
+  .navbar-left .dropdown-menu,
+  .navbar-right .dropdown-menu,
+  .navbar-left .open .dropdown-menu,
+  .navbar-right .open .dropdown-menu {
+    z-index: 1000;
+    margin-top: 0 !important;
+    float: left;
+    position: absolute;
+    top: 100%;
+    left: -1px;
+    min-width: 101%;
+    list-style: none;
+    background-color: #FFF;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    background-clip: padding-box;
+    -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+  }
+  #user-status + .btn-group .multiselect-container.dropdown-menu,
+  #user-role + .btn-group .multiselect-container.dropdown-menu {
+    top: 34px !important;
+    position: absolute !important;
+    right: 0;
+    left: auto;
+  }
+}
+

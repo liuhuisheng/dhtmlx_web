@@ -1,0 +1,65 @@
+﻿<div class="chat-form-wrapper">
+    <div id="chat-form">
+        <div class="chat-inner">
+            <h2 class="chat-header">
+                <a href="javascript:;"class="chat-form-close pull-right"><i class="fa fa-times"></i></a>
+                <i class="fa fa-user"></i>
+                &nbsp;活动会话&nbsp;
+                <span class="badge badge-success">{{chat.groups[0].friends.length}}</span>
+            </h2>
+
+            <div id="group-{{$index}}" class="chat-group" ng-repeat="group in chat.groups">
+                <h4 class="group-title">{{group.name}}</h4>
+                <a href="#" ng-repeat="friend in group.friends" ng-click="openChat($event,friend)">
+                    <img ng-src="{{friend.avatar}}" src="" class="avt" />
+                    <span class="user-status {{friend.status}}"></span>
+                    <small>{{friend.name}}</small>
+                    <span class="badge badge-info" ng-if="unreadCount(friend.chats)>0">{{unreadCount(friend.chats)}}</span>
+                </a>
+            </div>
+
+            <div class="chat-theme-setting text-right">
+                <div id="setting-theme-chat" data-on-label="深色" data-off-label="浅色"
+                    class="make-switch">
+                    <input type="checkbox" class="switch" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="chat-box-wrapper">
+        <div id="chat-box" style="top: 400px">
+            <div class="chat-box-header">
+                <a href="#" class="chat-box-close pull-right mlm">
+                    <i class="fa fa-times"></i>
+                </a>
+                <a href="#" class="chat-box-minimize-btn pull-right">
+                    <i class="fa fa-chevron-down"></i>
+                </a>
+                <span class="user-status is-online"></span>
+                <span class="display-name">Willard Mckenzie</span>
+            </div>
+            <div class="chat-content">
+                <ul class="chat-box-body">
+                    <li ng-repeat="item in chat.current.chats" ng-class-odd="'odd'">
+                        <p>
+                            <img ng-src="{{item.avatar}}" src="" class="avt" />
+                            <span class="user">{{item.from}}</span>
+                            <span class="time">{{item.time}}</span>
+                        </p>
+
+                        <p>{{item.message}}</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="chat-textarea">
+                <input placeholder="Type text and press Enter" class="form-control" />
+            </div>
+        </div>
+        <div class="chat-box-minimize">
+            <img
+                src="img/avatar/claudioguglieri-48.jpg"
+                data-pulsate="{border:false,speed:200,reach: 50}" class="img-circle" /><span
+                    class="user-status is-online"></span>
+        </div>
+    </div>
+</div>

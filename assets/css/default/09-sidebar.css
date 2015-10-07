@@ -1,0 +1,1020 @@
+/* ==============================================
+   LEFT SIDEBAR
+    A. Default Open State
+    B. Sidebar User Area
+    C. Left Sidebar Minified
+    D. Nano Sidebar Scroller Settings
+    E. Sidebar Skins - Default Dark Skin
+    F. Sidebar Skins - Light Skin
+=================================================
+  A. Default Open State
+================================================= */
+/* Sidebar Left Container */
+#sidebar_left {
+  color: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 230px;
+  min-height: 100%;
+  padding-bottom: 40px;
+  background-color: #30363e;
+}
+/* Sidebar Left Menu */
+.sidebar-menu {
+  padding-bottom: 20px;
+}
+/* Top Level Menu Items */
+.sidebar-menu > li {
+  margin: 0;
+}
+.sidebar-menu > li:first-child {
+  padding-top: 4px;
+}
+/* all menu Links */
+.sidebar-menu > li a {
+  color: #fff;
+}
+/* Top level menu Links */
+.sidebar-menu > li > a {
+  padding: 0;
+  line-height: 35px;
+  height: 35px;
+  overflow: hidden;
+}
+/* Top Level Menu Icon */
+.sidebar-menu > li > a > span:nth-child(1) {
+  float: left;
+  top: 0;
+  line-height: 35px;
+  width: 38px;
+  font-size: 13px;
+  text-align: center;
+  padding-left: 13px;
+}
+/* Top Level Menu Title */
+.sidebar-menu > li > a > span:nth-child(2) {
+  font-weight: 600;
+  padding-left: 6px;
+}
+/* Menu Item - Tray, used to hold badges and such */
+.sidebar-menu li > a > .sidebar-title-tray {
+  position: absolute;
+  right: 10px;
+  top: -2px;
+}
+.sidebar-menu li > a > .sidebar-title-tray .label {
+  padding: .0em .4em .2em;
+  font-size: 11px;
+}
+/* Menu item title caret */
+.sidebar-menu li > a > span.caret {
+  position: absolute;
+  top: 45%;
+  right: 13px;
+  border-top: 5px solid;
+  border-right: 5px solid transparent;
+  border-left: 5px solid transparent;
+}
+/* Open Menu Item Caret - we simply flip the carets border */
+.sidebar-menu li > a.menu-open > span.caret {
+  border-top: 0;
+  border-bottom: 5px solid;
+}
+/* Sub Level Menu  */
+.sidebar-menu > li > ul {
+  clear: both;
+  display: none;
+  width: 230px;
+  height: auto;
+  background-color: #282d33;
+}
+.sidebar-menu li > a.menu-open + ul {
+  display: block;
+}
+/* Sub Level Menu Items */
+.sidebar-menu > li > ul > li > a {
+  color: #d1d1d1;
+  padding: 11px 20px 11px 30px;
+}
+/* Sub Level Menu first and last items */
+.sidebar-menu > li > ul > li:first-child > a {
+  padding-top: 14px;
+}
+.sidebar-menu > li > ul > li:last-child > a {
+  padding-bottom: 17px;
+}
+/* Sub Level Menu Item Icon */
+.sidebar-menu > li > ul > li > a > span:nth-child(1) {
+  margin-right: 10px;
+  font-size: 11px;
+}
+/* Sub Level Menu Item Label */
+.sidebar-menu > li > ul > li > a > span.label {
+  float: right;
+  line-height: 17px;
+}
+/* Multi Level Menu (submenu inside a submenu and so on) */
+.sidebar-menu > li > ul > li ul {
+  clear: both;
+  display: none;
+  width: 230px;
+  height: auto;
+  background-color: #22262c;
+}
+/* Multi Level Menu items */
+.sidebar-menu > li > ul > li > ul li a {
+  padding: 9px 20px 9px 50px;
+}
+.sidebar-menu > li > ul > li > ul li:last-child a {
+  padding-bottom: 13px;
+}
+/* Multi Level Menu item label */
+.sidebar-menu > li > ul > li > ul li a .label.label-xs {
+  float: right;
+  line-height: 17px;
+}
+/* Top Menu item active border */
+.sidebar-menu > li > a.menu-open:after,
+.sidebar-menu > li.active > a:after,
+.sidebar-menu > li:hover > a:after,
+.sidebar-menu > li:focus > a:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 3px;
+  background: #AAA;
+}
+/* Sub-Menu Menu item active border */
+.sidebar-menu > li > ul > li > a.menu-open:after,
+.sidebar-menu > li > ul > li.active > a:after,
+.sidebar-menu > li > ul > li:hover > a:after,
+.sidebar-menu > li > ul > li:focus > a:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 3px;
+  background: #AAA;
+}
+/* Multi-Menu childen active/hover border */
+.sidebar-menu > li > ul > li > ul > li.active > a:after,
+.sidebar-menu > li > ul > li > ul > li:hover > a:after,
+.sidebar-menu > li > ul > li > ul > li:focus > a:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 5%;
+  height: 90%;
+  width: 3px;
+  background: #999;
+}
+/* Sidebar labels */
+.sidebar-menu .sidebar-label {
+  text-transform: uppercase;
+  color: #70829a;
+  font-weight: 600;
+  padding-left: 18px;
+  padding-bottom: 3px;
+  font-size: 12px;
+}
+/* Sidebar pProjects */
+/* Sidebar stats */
+.sidebar-menu .sidebar-stat .progress {
+  clear: both;
+  background-color: #26292e;
+}
+.sidebar-menu .sidebar-stat > a {
+  height: auto;
+  overflow: visible;
+}
+/*===============================================
+  B. Sidebar User Area
+================================================= */
+/* User Area Menu - A slide down user menu */
+.user-menu {
+  display: none;
+  position: relative;
+  left: 0;
+  top: 0;
+  height: 130px;
+  width: 100%;
+  padding: 10px;
+  background-color: #282d33;
+}
+.user-menu a {
+  position: relative;
+  display: block;
+  padding: 12px 5px 12px;
+  margin-bottom: 3px;
+  transition: all 0.2s ease;
+}
+.user-menu a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+/* menu icon */
+.user-menu a span {
+  font-size: 24px;
+  transition: all 0.3s ease;
+}
+.user-menu a:hover span {
+  color: #3078d7;
+}
+/* menu title */
+.user-menu a h5 {
+  display: none;
+}
+.user-divider {
+  height: 4px;
+  width: 100%;
+  background-color: #e5e5e5;
+  border-bottom: 1px solid #CCC;
+}
+/*====================================================
+  C. Left Sidebar Minified
+====================================================== */
+/* Sidebar Minified Button */
+.sidebar-toggle-mini {
+  width: 35px;
+  height: 32px;
+  padding: 7px 0;
+}
+.sidebar-toggle-mini a {
+  position: absolute;
+  right: 0;
+  display: block;
+  text-align: center;
+  padding: 6px 6px 5px;
+  border: 1px solid #444;
+  border-radius: 2px 0 0 2px;
+  background-color: #26292e;
+}
+.sidebar-toggle-mini:hover span {
+  color: #DDD;
+  transition: all ease-in-out 0.3s;
+}
+.sidebar-toggle-mini span {
+  position: relative;
+  color: #888;
+  font-size: 16px;
+  transform: rotate(180deg);
+}
+/* active state */
+/* Sidebar Minified State */
+body.sb-l-m #sidebar_left {
+  z-index: 1028;
+  overflow: visible;
+  width: 60px;
+  height: 100%;
+  left: 0;
+  background-color: #30363e;
+}
+body.sb-l-m #sidebar_left:before {
+  width: 60px;
+}
+body.sb-l-m .sidebar-header {
+  display: none;
+}
+body.sb-l-m #sidebar_left .sidebar-label,
+body.sb-l-m #sidebar_left .sidebar-title-tray,
+body.sb-l-m #sidebar_left .sidebar-title,
+body.sb-l-m #sidebar_left .caret {
+  display: none;
+}
+body.sb-l-m #sidebar_left .sidebar-proj,
+body.sb-l-m #sidebar_left .sidebar-stat {
+  display: none;
+}
+/* Icon container */
+body.sb-l-m .sidebar-menu > li {
+  padding: 7px 0;
+}
+body.sb-l-m .sidebar-menu > li > a {
+  overflow: visible;
+}
+/* Icon */
+body.sb-l-m .sidebar-menu > li > a > span:nth-child(1) {
+  color: #ccc;
+  left: -1px;
+  width: 60px;
+  font-size: 18px;
+  padding-left: 0;
+}
+/* Active icon */
+body.sb-l-m .sidebar-menu > li.active > a > span:nth-child(1) {
+  color: #2f87c1;
+}
+/* Item title */
+body.sb-l-m .sidebar-menu > li > a > .sidebar-title {
+  position: absolute;
+  left: 60px;
+  top: -4px;
+  width: 180px;
+  height: 44px;
+  line-height: 44px;
+  font-size: 14px;
+  padding-left: 15px;
+  border-left: 1px solid #222;
+  background-color: #282d33;
+}
+/* Convert submenus to visible only on hover */
+body.sb-l-m .sidebar-menu > li > a.menu-open + ul {
+  display: none;
+}
+body.sb-l-m .sidebar-menu > li:hover > a + ul,
+body.sb-l-m .sidebar-menu > li:hover > a > .sidebar-title {
+  display: block !important;
+}
+/* Sub-Menus title caret etc */
+body.sb-l-m .sidebar-menu > li > ul li a > .caret {
+  display: block !important;
+}
+/* Sub-Menus */
+body.sb-l-m .sidebar-menu > li > ul {
+  position: absolute;
+  left: 60px;
+  top: 38px;
+  width: 180px;
+  height: auto;
+  border-left: 1px solid #222;
+  padding-bottom: 7px;
+  overflow: hidden;
+}
+body.sb-l-m .sidebar-menu > li > ul > li ul {
+  width: 180px;
+}
+/* catch overflow of multi-level submenus */
+body.sb-l-m .sidebar-menu > li > ul > li {
+  overflow: hidden;
+}
+/* first level menu item padding */
+body.sb-l-m .sidebar-menu li > ul > li > a {
+  padding: 8px 20px 8px 20px;
+}
+/* multi level menu item padding */
+body.sb-l-m .sidebar-menu li > ul > li > ul > li a {
+  padding: 8px 20px 8px 35px;
+}
+/* related page container modifications */
+body.sb-l-m #content_wrapper {
+  margin-left: 60px;
+}
+/* If sidebar is hidden and minified */
+body.sb-l-c.sb-l-m #content_wrapper {
+  margin-left: 0;
+}
+/* Navbar Branding Mini mode */
+body.sb-l-m .navbar-branding {
+  width: 60px;
+}
+body.sb-l-m .navbar-brand {
+  display: none;
+}
+/*===============================================
+  D. Nano Sidebar Scroller Settings (Core Plugin)
+================================================= */
+#sidebar_left.affix.nano .tooltip {
+  z-index: 9999 !important;
+}
+/* If the sidebar is minified we disable nanoscroll via css
+ * otherwise nano scroll hides popout menus and the scroll is
+ * needed to see submenus with many items */
+body.sb-l-m #sidebar_left.nano {
+  position: absolute;
+}
+body.sb-l-m #sidebar_left.nano > .nano-content {
+  overflow: visible;
+  right: 0 !important;
+}
+/*=======================================================
+  E. Sidebar Skins - Default Dark Skin 
+========================================================= */
+/* Top Level Menu Item - BG color:hover */
+.sidebar-menu > li > a:hover,
+.sidebar-menu > li > a:focus,
+.sidebar-menu > li > a:active {
+  background-color: transparent;
+}
+/* Top Level Item - Border Color:hover */
+.sidebar-menu > li:hover > a:after,
+.sidebar-menu > li:focus > a:after {
+  background: transparent;
+}
+/* Top Level Active Menu Item - BG Color */
+.sidebar-menu > li.active > a {
+  background-color: transparent;
+}
+/* Top Level Active Menu Item - Icon Color */
+.sidebar-menu > li.active > a > span:nth-child(1) {
+  color: #4a89dc;
+}
+/* Top Level Active Item - Border Color */
+.sidebar-menu > li.active > a:after,
+.sidebar-menu > li > a.menu-open:after {
+  background: transparent;
+}
+/* Sub-Menu Item - BG Color */
+.sidebar-menu > li > ul {
+  background-color: #282d33;
+}
+/* Sub-Menu Item - BG Color:hover */
+.sidebar-menu > li > ul > li > a:hover,
+.sidebar-menu > li > ul > li > a:focus {
+  background-color: #22262c;
+}
+/* Sub-Menu Item - Border Color:hover */
+.sidebar-menu > li > ul > li:hover > a:after,
+.sidebar-menu > li > ul > li:focus > a:after {
+  background: #4a89dc;
+}
+/* Sub-Menu Active Item - BG Color */
+.sidebar-menu > li > ul > li.active > a {
+  background-color: transparent;
+}
+/* Sub-Menu Active Item - Icon Color */
+.sidebar-menu > li > ul > li.active > a > span:nth-child(1),
+.sidebar-menu > li > ul > li > a.menu-open > span:nth-child(1) {
+  color: #4a89dc;
+}
+/* Sub-Menu Active Item - Border Color */
+.sidebar-menu > li > ul > li.active > a:after,
+.sidebar-menu > li > ul > li > a.menu-open:after {
+  background: #4a89dc;
+}
+/* Multi-Menu Item - BG Color */
+.sidebar-menu > li > ul > li ul {
+  background-color: #22262c;
+}
+/* Multi-level Item - BG Color:hover */
+.sidebar-menu > li > ul > li > ul > li > a:hover,
+.sidebar-menu > li > ul > li > ul > li > a:focus {
+  background-color: transparent;
+}
+/* Multi-level Active Item - Border Color:hover */
+.sidebar-menu > li > ul > li > ul > li:hover > a:after,
+.sidebar-menu > li > ul > li > ul > li:focus > a:after {
+  background: #967adc;
+}
+/* Multi-level Active Item - BG Color */
+.sidebar-menu > li > ul > li > ul > li.active > a {
+  background: transparent;
+}
+/* Multi-level Active Item - Icon Color */
+.sidebar-menu > li > ul > li > ul > li.active > a > span:nth-child(1),
+.sidebar-menu > li > ul > li > ul > li > a.menu-open > span:nth-child(1) {
+  color: #ffffff;
+}
+/* Multi-level Active Item - Border Color */
+.sidebar-menu > li > ul > li > ul > li.active > a:after {
+  background: #967adc;
+}
+/* Top Level Menu Item - Label Color */
+.sidebar-menu .sidebar-label {
+  color: #70829a;
+}
+/* Top Level Menu Item - Link Color */
+.sidebar-menu > li a {
+  color: #ffffff;
+}
+/* Menu item Caret */
+.sidebar-menu li > a > span.caret {
+  color: #ffffff;
+}
+/* Open Menu item Caret */
+.sidebar-menu li > a.menu-open > span.caret {
+  color: #4a89dc;
+}
+/* Usermenu - BG Color */
+.user-menu {
+  background-color: #282d33;
+}
+/* Usermenu - Item Icon Color */
+.user-menu a span {
+  color: #dddddd;
+}
+/* Usermenu - BG Color:hover */
+.user-menu a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+/* Usermenu - Item Icon Color:hover */
+.user-menu a:hover span {
+  color: #4a89dc;
+}
+/*=======================================================
+  F. Sidebar Skins - Light Skin
+     Applied via class to "#sidebar" 
+     eg: <aside id="sidebar_left" class="sidebar-light">
+========================================================= */
+#sidebar_left.sidebar-light {
+  color: #666;
+  background-color: #fafafa;
+  border-right: 1px solid #DDD;
+  font-family: "Roboto";
+}
+#sidebar_left.sidebar-light .sidebar-menu .sidebar-label {
+  color: #AAA;
+  font-size: 11px;
+  font-weight: 500;
+}
+#sidebar_left.sidebar-light .sidebar-menu li > a > span.caret {
+  color: #BBB;
+}
+#sidebar_left.sidebar-light .sidebar-menu li > a.menu-open > span.caret {
+  color: #999;
+}
+#sidebar_left.sidebar-light .sidebar-menu > li a {
+  color: #888;
+}
+#sidebar_left.sidebar-light .sidebar-menu > li > a:hover,
+#sidebar_left.sidebar-light .sidebar-menu > li > a:focus,
+#sidebar_left.sidebar-light .sidebar-menu > li > a:active {
+  background-color: transparent;
+}
+#sidebar_left.sidebar-light .sidebar-menu > li > a > span:nth-child(1) {
+  color: #888;
+}
+#sidebar_left.sidebar-light .sidebar-menu > li > a > span:nth-child(2) {
+  color: #555;
+  font-weight: 500;
+  letter-spacing: 0.4px;
+}
+#sidebar_left.sidebar-light .sidebar-menu > li.active > a > span:nth-child(1) {
+  color: #4a89dc;
+}
+#sidebar_left.sidebar-light .sidebar-menu > li > ul {
+  background-color: #f2f2f2;
+  box-shadow: 0 1px 0 #e5e5e5 inset, 0 -1px 0 #e5e5e5 inset;
+}
+#sidebar_left.sidebar-light .sidebar-menu > li > ul > li > a:hover,
+#sidebar_left.sidebar-light .sidebar-menu > li > ul > li > a:focus {
+  background-color: transparent;
+}
+#sidebar_left.sidebar-light .sidebar-menu > li > ul > li.active > a > span:nth-child(1),
+#sidebar_left.sidebar-light .sidebar-menu > li > ul > li > a.menu-open > span:nth-child(1) {
+  color: #4a89dc;
+}
+#sidebar_left.sidebar-light .sidebar-menu > li > ul > li ul {
+  background-color: #eaeaea;
+  box-shadow: 0 1px 0 #d9d9d9 inset, 0 -1px 0 #d9d9d9 inset;
+}
+#sidebar_left.sidebar-light .sidebar-menu > li > ul > li > ul > li > a:hover,
+#sidebar_left.sidebar-light .sidebar-menu > li > ul > li > ul > li > a:focus {
+  background-color: transparent;
+}
+#sidebar_left.sidebar-light .sidebar-menu > li > a.menu-open:after,
+#sidebar_left.sidebar-light .sidebar-menu > li > ul > li > a.menu-open:after {
+  background: transparent;
+}
+#sidebar_left.sidebar-light .sidebar-menu > li > ul > li > a.menu-open:after,
+#sidebar_left.sidebar-light .sidebar-menu > li > ul > li > ul > li > a.menu-open:after {
+  background: #3bafda;
+}
+#sidebar_left.sidebar-light .sidebar-menu > li > ul > li > ul > li.active > a:after,
+#sidebar_left.sidebar-light .sidebar-menu > li > ul > li > ul > li:hover > a:after,
+#sidebar_left.sidebar-light .sidebar-menu > li > ul > li > ul > li:focus > a:after {
+  background: #f6bb42;
+}
+#sidebar_left.sidebar-light .sidebar-menu > li > ul > li.active > a > span.caret {
+  color: #AAA;
+}
+#sidebar_left.sidebar-light .sidebar-menu .sidebar-stat .progress {
+  background-color: #ddd;
+}
+#sidebar_left.sidebar-light .sidebar-toggle-mini a {
+  background-color: #f7f7f7;
+  border-color: #eaeaea;
+}
+#sidebar_left.sidebar-light.light {
+  background-color: #fff;
+}
+#sidebar_left.sidebar-light.light .sidebar-menu > li > ul {
+  background-color: #fbfbfb;
+}
+#sidebar_left.sidebar-light.light .sidebar-menu > li > ul > li ul {
+  background-color: #f5f5f5;
+}
+#sidebar_left.sidebar-light .user-menu {
+  background-color: #f2f2f2;
+  box-shadow: 0 -1px 0 #e6e6e6 inset;
+}
+#sidebar_left.sidebar-light .user-menu a span {
+  color: #777;
+}
+/* minified version of light sidebar */
+body.sb-l-m #sidebar_left.sidebar-light {
+  background-color: #FAFAFA;
+}
+body.sb-l-m #sidebar_left.sidebar-light.light {
+  background-color: #FFF;
+}
+body.sb-l-m #sidebar_left.sidebar-light .sidebar-menu > li > a > .sidebar-title,
+body.sb-l-m #sidebar_left.sidebar-light .sidebar-menu > li > ul {
+  border: 1px solid #DDD;
+  border-top: 0;
+  background-color: #f8f8f8;
+  left: 59px;
+  box-shadow: none;
+}
+body.sb-l-m #sidebar_left.sidebar-light .sidebar-menu > li > a > .sidebar-title {
+  border-top: 1px solid #DDD;
+}
+@media (max-width: 900px) {
+  /* Sidebar Minified State */
+  body.sb-l-m #sidebar_left {
+    width: 45px;
+  }
+  body.sb-l-m #sidebar_left:before {
+    width: 45px;
+  }
+  /* Menu item icon */
+  body.sb-l-m .sidebar-menu > li > a > span:nth-child(1) {
+    left: -1px;
+    width: 45px;
+    font-size: 18px;
+  }
+  /* menu item title */
+  body.sb-l-m .sidebar-menu > li > a > .sidebar-title {
+    position: absolute;
+    left: 45px;
+    top: -4px;
+    width: 180px;
+    height: 44px;
+    line-height: 44px;
+    font-size: 14px;
+    padding-left: 15px;
+    border-left: 1px solid #222;
+    background-color: #282d33;
+  }
+  /* Sub-Menus */
+  body.sb-l-m .sidebar-menu > li > ul {
+    position: absolute;
+    left: 45px;
+    top: 38px;
+    width: 180px;
+    height: auto;
+    border-left: 1px solid #222;
+    padding-bottom: 7px;
+    overflow: hidden;
+  }
+  body.sb-l-m .sidebar-menu > li > ul > li ul {
+    width: 180px;
+  }
+  /* first level menu item padding */
+  body.sb-l-m .sidebar-menu li > ul > li > a {
+    padding: 8px 20px 8px 20px;
+  }
+  /* multi level menu item padding */
+  body.sb-l-m .sidebar-menu li > ul > li > ul > li a {
+    padding: 8px 20px 8px 35px;
+  }
+  /* related page container modifications */
+  body.sb-l-m #content_wrapper {
+    margin-left: 45px;
+  }
+  /* If sidebar is hidden and minified */
+  body.sb-l-c.sb-l-m #content_wrapper {
+    margin-left: 0;
+  }
+  /* Navbar brand minified (hide logo) */
+  body.sb-l-o .navbar-brand,
+  body.sb-l-m .navbar-brand {
+    display: none;
+  }
+  /* Navbar branding minified */
+  body.sb-l-o .navbar-branding,
+  body.sb-l-m .navbar-branding {
+    max-width: 45px;
+    margin-right: 5px;
+  }
+  /* Navbar branding Toggle icon sidebar open */
+  body.sb-l-o .navbar #toggle_sidemenu_l {
+    transform: rotate(90deg);
+  }
+  /* Navbar branding toggle icon minified */
+  body.sb-l-o.sb-l-m .navbar #toggle_sidemenu_l {
+    transform: rotate(0deg);
+  }
+  /* Navbar branding toggle icon minified */
+  body.sb-l-o .navbar #toggle_sidemenu_l,
+  body.sb-l-m .navbar #toggle_sidemenu_l {
+    width: 45px;
+  }
+  /* hide sidebar user menu button when the sidebar is
+    collapsed. As it's not accessible in this mode*/
+  .sb-l-o .navbar .sidebar-menu-toggle,
+  .sb-l-c .navbar .sidebar-menu-toggle {
+    margin-left: 10px;
+    display: none;
+  }
+  #toggle_sidemenu_r {
+    margin-top: 4px;
+  }
+}
+
+
+/* ==============================================
+   Right Sidebar
+     A. Default Closed State
+     B. Sidebar Right Panel Menu
+     C. Nano Sidebar Scroller Settings
+=================================================
+  A. Default Closed State
+================================================= */
+#sidebar_right {
+  position: fixed;
+  width: 300px;
+  height: 100%;
+  top: 60px;
+  right: -300px;
+  border-left: 1px solid #ddd;
+  background: #f8f8f8;
+}
+#sidebar_right .sidebar-right-header {
+  width: 100%;
+  height: 59px;
+  padding: 4px 10px 4px 20px;
+}
+#sidebar_right .sidebar_right_content a:hover {
+  text-decoration: none;
+}
+/*===============================================
+   B. Sidebar Right Panel Menu
+================================================= */
+.title-divider {
+  border-bottom: 1px solid #e8e8e8;
+  padding: 0 5px 9px 5px;
+}
+#sidebar_right .panel {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+#sidebar_right .panel-heading {
+  height: 51px;
+  min-height: 51px;
+  overflow: hidden;
+}
+#sidebar_right .panel-tabs li a {
+  padding: 17px 18px;
+  border-right: 1px solid transparent;
+}
+#sidebar_right .panel-tabs li:first-child a {
+  border-left: 1px solid transparent;
+}
+/*===============================================
+  C. Nano Sidebar Scroller Settings
+================================================= */
+#sidebar_right.nano > .nano-pane {
+  background: rgba(0, 0, 0, 0.07);
+}
+#sidebar_right.nano > .nano-pane > .nano-slider {
+  background: #444;
+  background: #CCC;
+}
+/* ==============================================
+    Sidebar Actions
+     A. Sidebar Left Toggle
+     B. Sidebar Right Toggle
+     C. Left Sidebar Minified Helper
+     D. Mobile Menu Modifications
+=================================================
+  A. Sidebar Left Toggle
+================================================= */
+/*left sidebar open*/
+.sb-l-o #sidebar_left {
+  left: 0;
+  overflow: hidden;
+}
+.sb-l-o #content_wrapper {
+  margin-left: 230px;
+}
+/*left sidebar closed*/
+.sb-l-c #sidebar_left {
+  left: -230px;
+  overflow: hidden;
+}
+.sb-l-c #content_wrapper {
+  margin-left: 0;
+}
+/*adjust navbar branding when closed*/
+.sb-l-c .navbar-branding {
+  width: 60px;
+}
+.sb-l-c .navbar-brand {
+  display: none;
+}
+/*====================================================
+  B. Sidebar Right Toggle
+====================================================== */
+/*Sidebar Right Open */
+.sb-r-o #sidebar_right {
+  right: 0;
+}
+.sb-r-o #content_wrapper {
+  margin-right: 300px;
+}
+/*Sidebar Right Closed*/
+.sb-r-c #sidebar_right {
+  right: -300px;
+}
+.sb-r-c #content_wrapper {
+  margin-right: 0;
+}
+/*====================================================
+  C. Left Sidebar Minified Helper
+====================================================== */
+.sb-l-c.sb-l-m #sidebar_left {
+  left: -60px;
+}
+/*hide sidebar user menu button when the sidebar is
+collapsed. As it's not accessible in this mode*/
+.sb-l-m .navbar .sidebar-menu-toggle,
+.sb-l-c .navbar .sidebar-menu-toggle {
+  margin-left: 10px;
+  display: none;
+}
+/*===============================================
+  D. Mobile Menu Modifications
+================================================= */
+/* At less than 1100px we collapse any open sidebars via 
+Media Queries. Theme Javscript will also add a a
+".mobile-view" class so that you can do any needed 
+manipulation using an html class aswell */
+@media (max-width: 1100px) {
+  /* Sidebar Left Open/Default */
+  #content_wrapper,
+  .sb-l-o #content_wrapper {
+    margin-left: 0;
+    left: 230px;
+  }
+  /* Sidebar Left Minified */
+  .sb-l-m #content_wrapper {
+    left: 0;
+  }
+  /* Sidebar Left Closed */
+  .sb-l-c #content_wrapper {
+    margin-left: 0;
+    left: 0;
+  }
+  /* Sidebar Right Open */
+  .sb-r-o #content_wrapper {
+    margin-right: 0;
+    left: -300px;
+  }
+}
+/* ==============================================
+   Topbar
+     A. Topbar Menu
+     B. Topbar DropMenu
+=================================================
+  A. Topbar Menu
+================================================= */
+#topbar {
+  z-index: 2;
+  position: relative;
+  width: 100%;
+  min-height: 51px;
+  padding: 10px 21px;
+  background: #fafafa;
+  border-bottom: 1px solid #e0e0e0;
+}
+.topbar-right {
+  float: right;
+}
+.breadcrumb {
+  float: left;
+  position: relative;
+  padding: 2px 25px 0 0;
+  margin-bottom: 0;
+  font-size: 14px;
+  border-radius: 0;
+  background-color: transparent;
+}
+.breadcrumb > li {
+  color: #888;
+  font-size: 12px;
+}
+.breadcrumb > li.crumb-active > a {
+  color: #555;
+  font-size: 18px;
+}
+/*Toggle sidemenu button*/
+#toggle_sidemenu_r i.fa,
+#toggle_sidemenu_r span.glyphicon,
+#toggle_sidemenu_r span.glyphicons {
+  margin-top: 2px;
+}
+/* toggle sidemenu button (when menu is open) */
+body.sb-r-o #toggle_sidemenu_r i.fa,
+body.sb-r-o #toggle_sidemenu_r span.glyphicon,
+body.sb-r-o #toggle_sidemenu_r span.glyphicons {
+  -webkit-transform: scale(-1, 1);
+  transform: scale(-1, 1);
+  color: #999;
+}
+/*toggle right sidebar badge
+*/
+.badge.badge-hero {
+  position: relative;
+  top: -12px;
+  margin-left: -10px;
+  padding: 2px 5px;
+  font-size: 11px;
+}
+/*===============================================
+   B. Topbar Dropmenu
+================================================= */
+#topbar-dropmenu {
+  z-index: 9999;
+  overflow: hidden;
+  display: none;
+  position: relative;
+  padding: 17px 20px 10px;
+  height: auto;
+  width: 100%;
+  background: url("../../../img/patterns/topbar-bg.jpg") repeat -60px top;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.4) inset;
+}
+#topbar-dropmenu:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.4);
+}
+.topbar-menu .metro-tile {
+  opacity: 0;
+  display: block;
+  height: 95px;
+  position: relative;
+  padding: 15px 5px 0;
+  margin-bottom: 8px;
+  border-radius: 4px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.25) !important;
+  transition: background 0.2s ease;
+}
+.topbar-menu .metro-tile:hover,
+.topbar-menu .metro-tile:focus,
+.topbar-menu .metro-tile:active {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.4) !important;
+}
+.topbar-menu .metro-icon {
+  font-size: 44px;
+}
+.topbar-menu .metro-title {
+  position: absolute;
+  bottom: 0;
+  left: 10px;
+  font-size: 11px;
+  font-weight: 600;
+}
+/* topbar menu modal */
+.metro-modal {
+  cursor: pointer;
+  position: fixed;
+  display: none;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 9998;
+  background: rgba(0, 0, 0, 0.6);
+}
+@media (max-width: 700px) {
+  #topbar .breadcrumb {
+    padding-top: 3px;
+    padding-left: 2px;
+  }
+  #topbar .breadcrumb .crumb-active {
+    display: none;
+  }
+  #topbar .breadcrumb > li.crumb-active + li:before {
+    display: none;
+  }
+}
+@media (max-width: 900px) {
+  body.sb-l-m #topbar.affix,
+  body.sb-l-o.sb-l-m #topbar.affix {
+    margin-left: 45px;
+    width: auto;
+  }
+  body.sb-l-o #topbar.affix {
+    margin-left: 230px;
+    width: 100%;
+  }
+}
+#topbar .nav.nav-list-topbar {
+  margin: -10px 15px;
+}
+#topbar .nav.nav-list-topbar li a {
+  padding: 16px 14px 12px;
+}
+#topbar .nav.nav-list-topbar li.active a {
+  border-bottom: 3px solid #4a89dc;
+}

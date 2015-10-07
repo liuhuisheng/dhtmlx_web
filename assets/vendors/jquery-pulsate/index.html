@@ -1,0 +1,91 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <title>jQuery.pulsate.js</title>
+  <link href="http://sencss.kilianvalkhof.com/minified/sen.full.min.css" rel="stylesheet">
+  <style>
+  body {background:#112;color:#ddd;margin:100px auto;width:620px;position:relative;text-shadow:0px 0px 3px #000;}
+  h1 {font-size:16px;margin:0;padding:0;}
+  h2, h3 {text-align:center;clear:both;}
+  p.description {
+    text-align:center;
+    font-style:italic;
+    margin:1.5em 0;
+  }
+  a { color:inherit }
+
+  #pulse,
+  .pulse {
+    margin:100px auto 40px;
+    width:200px;
+    height:30px;
+    line-height:30px;
+    font-weight:bold;
+    background:#fff;
+    color:#000;
+    border-radius:10px;
+    text-align:center;
+    text-shadow:none;
+  }
+  .pulse {margin:50px; float:left; width:210px;}
+  .end {text-align:right;font-style:italic;}
+  </style>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+  <script type="text/javascript" src="jquery.pulsate.js"></script>
+  <script>
+    $(function () {
+     $("#pulse").pulsate();
+     $(".pulse1").pulsate({glow:false});
+     $(".pulse2").pulsate({color:"#09f"});
+     $(".pulse3").pulsate({reach:100});
+     $(".pulse4").pulsate({speed:2500});
+     $(".pulse5").pulsate({pause:1000});
+     $(".pulse6").pulsate({onHover:true});
+    });
+  </script>
+</head>
+<body>
+  <div id="pulse"><h1>jQuery.pulsate();</h1></div>
+  <p class="description">jQuery.pulsate.js adds a pulsating effect to elements.<br> Useful for drawing the users attention.</p>
+  <h2>About</h2>
+  <p>jQuery.pulsate started out as an experiment with <code>outline-offset</code> by <a href="http://kilianvalkhof.com">Kilian Valkhof</a>. By animating it you can create a pulsating effect that's useful for focussing attention to a certain part of your webpage in a subtle way.</p>
+  <h2>Usage</h2>
+  <p><strong>Simple example:</strong></p>
+  <pre><code>$(element).pulsate();</code></pre>
+
+  <p><strong>Custom options</strong> (defaults are shown)</p>
+  <pre><code>$(element).pulsate({
+  color: $(this).css("background-color"), // set the color of the pulse
+  reach: 20,                              // how far the pulse goes in px
+  speed: 1000,                            // how long one pulse takes in ms
+  pause: 0,                               // how long the pause between pulses is in ms
+  glow: true,                             // if the glow should be shown too
+  repeat: true,                           // will repeat forever if true, if given a number will repeat for that many times
+  onHover: false                          // if true only pulsate if user hovers over the element
+});</code></pre>
+  <p>Works in Chrome, Safari and Firefox. Prettiest in Firefox since it supports <a href="https://developer.mozilla.org/en/CSS/-moz-outline-radius">Outline-radius</a></p>
+
+  <h2>Download</h2>
+  <ul>
+    <li><a href="https://raw.github.com/Kilian/jQuery.pulsate/master/jquery.pulsate.js">jQuery.pulsate.js</a> 3kb</li>
+    <li><a href="https://raw.github.com/Kilian/jQuery.pulsate/master/jquery.pulsate.min.js">jQuery.pulsate.min.js</a> 1.6kb</li>
+  </ul>
+  <p>Requires, obviously, <a href="http://jquery.com">jQuery</a> &hearts;</p>
+  <p>Git repo hosted at <a href="https://github.com/Kilian/jQuery.pulsate">Github.com/Kilian/jQuery.pulsate</a>. Contributions welcome!</p>
+
+
+  <h2>Demos</h2>
+    <div class="pulse pulse1">$(".pulse1").pulsate({glow:false})</div>
+    <div class="pulse pulse2">$(".pulse2").pulsate({color:"#09f"})</div>
+    <div class="pulse pulse3">$(".pulse3").pulsate({reach:100})</div>
+    <div class="pulse pulse4">$(".pulse4").pulsate({speed:2500})</div>
+    <div class="pulse pulse5">$(".pulse5").pulsate({pause:1000})</div>
+    <div class="pulse pulse6">$(".pulse6").pulsate({onHover:true})</div>
+  <h3>License</h3>
+  <p>Dual licensed under the <a href="http://www.opensource.org/licenses/mit-license.php">MIT</a> and <a href="http://www.gnu.org/licenses/gpl.html">GPL</a> licenses.</p>
+
+  <p class="end">~ <a href="http://kilianvalkhof.com">Kilian</a></p>
+</body>
+</html>
+
