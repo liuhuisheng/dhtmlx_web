@@ -11,5 +11,5 @@ The seed app doesn't do much, just shows how to wire two controllers and views t
 
 
 ## Getting Started
-请参照[萧秦博客](http://xqin.cnblogs.com/)
+Please refer to my blog [萧秦](http://xqin.cnblogs.com/)
  
