@@ -94,13 +94,13 @@ module.exports = function(grunt) {
                 },
                 nonull: true,
                 src: [
-                    'assets/css/default/03-scaffolding.css',
-                    'assets/css/default/04-helpers.css',
+                    'assets/css/default/scaffolding.css',
+                    'assets/css/default/helpers.css',
                     'assets/vendors/buttons/css/buttons.min.css',
                     'assets/lib/dhtmlx/v412_std/skins/default/dhtmlx.css',
                     'app/css/app.css',
                     'app/css/fix.css',
-                     'assets/css/default/01-icons.css'
+                     'assets/css/default/icons.css'
                    ],
                 dest: 'build/app.css'
             },
