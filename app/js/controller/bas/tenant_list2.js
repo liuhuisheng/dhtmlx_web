@@ -3,29 +3,16 @@
  */
 define(['app','directive/dhtmlx'], function (app) {
     app.controller('bas/tenant_list2Ctrl', ['$scope', '$element', '$resource', function ($scope, $element, $resource) {
-        //var toolbar = d.tab.attachToolbar();
-        ////toolbar.setIconsPath(d.assets + "img/btn/");
-        ////toolbar.addButton("open", 2, "打开", "open.gif", "open_dis.gif");
-        ////toolbar.addButton("save", 3, "保存", "save.gif", "save_dis.gif");
-
-        //toolbar.setIconsPath(app.getProjectRoot('chitu.assets2/css/icon/16/'));
-        //toolbar.addButton("new", 1, "新增", "add.png");
-        ////toolbar.addButton("edit", 2, "修改", "edit.gif");
-        ////toolbar.addButton("del", 3, "删除", "cross.png");
-        ////toolbar.addButton("test2", 5, "测试", "fa fa-comments", "green");
-        ////toolbar.disableItem("edit");
-        //toolbar.attachEvent("onClick", function (id) {
-        //    alert(id);
-        //});
-
+ 
         var grid = d.tab.attachGrid();
-        grid.setFields("tenant_id|#action,tenant_id,tenant_name,charge_person,tel,mobile");
+        grid.setFields("tenant_id|#action,tenant_id,tenant_name,charge_person,tel,mobile,is_enabled,addr,memo");
         grid.setHeader("<a href=# class='dhx_grid_add'><i class='fa fa-plus-circle'></i></a>,商户编码, 商户名称, 责任人, 电话, 手机, 是否启用, 地址, 备注");
         grid.attachHeader("#rspan,#text_filter,#text_filter,#select_filter,#text_filter,#text_filter,#text_filter,#text_filter,#text_filter");
         grid.setInitWidths("55,100,250,*")
         grid.setColAlign("center,left,left,left")
-        grid.setColTypes("ro,ro,ro,ed");
+        grid.setColTypes("ro,ro,ro,ed,ro,ro,roch,ro,ro");
         grid.setColSorting("na,int,str,str")
+        grid.setImagePath(app.getProjectRoot("assets/lib/dhtmlx/v403_pro/skins/skyblue/imgs/"));
         grid.init();
         grid.enableSmartRendering(true, 30);
 
